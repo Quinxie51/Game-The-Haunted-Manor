@@ -1,5 +1,20 @@
-[gd_scene format=3 uid="uid://cyuplye0kofja"]
+[gd_scene load_steps=4 format=3 uid="uid://cyuplye0kofja"]
+
+[ext_resource type="Script" path="res://script/main_game.gd" id="1_okd6m"]
+[ext_resource type="Texture2D" uid="uid://gkpovaktftk2" path="res://asset/background/kitchen/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_kitchen_in_European_style-01.png" id="2_35pyr"]
+[ext_resource type="PackedScene" uid="uid://drjfd2qoordnh" path="res://scene/dialog.tscn" id="3_vy2fj"]
 
 [node name="Main game" type="Node2D"]
+position = Vector2(344, 94)
+scale = Vector2(0.647823, 0.647823)
+script = ExtResource("1_okd6m")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="APostApocalypticFutureWorldHundredsOfYearsAfterTheEndOfCivilizationWithALotOfFurnitureAHauntedKitchenInEuropeanStyle-01" type="Sprite2D" parent="."]
+position = Vector2(385.908, 367.384)
+texture = ExtResource("2_35pyr")
+
+[node name="Dialog" parent="." instance=ExtResource("3_vy2fj")]

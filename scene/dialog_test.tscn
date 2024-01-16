@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl3y83u7uvp5i"]
+
+[ext_resource type="Texture2D" uid="uid://bnlcjwkhsmmju" path="res://asset/other/woman figure.png" id="1_pfkj3"]
+
+[node name="Dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = -5.0
+offset_right = -9.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 495.0
+offset_right = 1132.0
+offset_bottom = 625.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_right = 959.0
+offset_bottom = 39.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 38.0
+offset_right = 938.0
+offset_bottom = 102.0
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(149, 494)
+scale = Vector2(0.34667, 0.332763)
+texture = ExtResource("1_pfkj3")
+
+[node name="Timer" type="Timer" parent="."]

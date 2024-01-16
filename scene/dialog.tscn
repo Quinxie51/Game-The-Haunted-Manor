@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://drjfd2qoordnh"]
+
+[ext_resource type="Script" path="res://Dialog.gd" id="1_ym76x"]
+
+[node name="Dialog" type="Node2D"]
+script = ExtResource("1_ym76x")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -276.0
+offset_top = -130.0
+offset_right = 278.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="next_char" type="Timer" parent="."]
+
+[node name="next_message" type="Timer" parent="."]
+
+[connection signal="ready" from="next_char" to="." method="_on_next_char_ready"]
+[connection signal="ready" from="next_message" to="." method="_on_next_message_ready"]
