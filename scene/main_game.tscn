@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cyuplye0kofja"]
+
+[node name="Main game" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]

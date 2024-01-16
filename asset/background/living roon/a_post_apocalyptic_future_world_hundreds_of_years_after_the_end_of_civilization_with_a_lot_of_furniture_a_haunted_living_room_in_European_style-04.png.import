@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c0yoo7i205jrs"
+path="res://.godot/imported/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_living_room_in_European_style-04.png-d430cfcef76348ba903d2b312283b269.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://asset/background/living roon/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_living_room_in_European_style-04.png"
+dest_files=["res://.godot/imported/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_living_room_in_European_style-04.png-d430cfcef76348ba903d2b312283b269.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
