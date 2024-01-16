@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl3y83u7uvp5i"]
+[gd_scene load_steps=3 format=3 uid="uid://dl3y83u7uvp5i"]
 
+[ext_resource type="Script" path="res://script/Dialog Box.gd" id="1_4slrf"]
 [ext_resource type="Texture2D" uid="uid://bnlcjwkhsmmju" path="res://asset/other/woman figure.png" id="1_pfkj3"]
 
 [node name="Dialog" type="Control"]
@@ -14,26 +15,27 @@ offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Dialog Box" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 174.0
 offset_top = 495.0
 offset_right = 1132.0
 offset_bottom = 625.0
+script = ExtResource("1_4slrf")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+[node name="Name" type="RichTextLabel" parent="Dialog Box"]
 layout_mode = 0
 offset_right = 959.0
 offset_bottom = 39.0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="ColorRect"]
+[node name="Text" type="RichTextLabel" parent="Dialog Box"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 38.0
 offset_right = 938.0
 offset_bottom = 102.0
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Indicator" type="Polygon2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(149, 494)
