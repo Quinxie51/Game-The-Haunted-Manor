@@ -64,3 +64,6 @@ func nextPhrase():
 	finished = true
 	phraseNum += 1
 	return
+
+func _on_skip_pressed():
+	get_tree().change_scene_to_file("res://scene/living_room.tscn")
