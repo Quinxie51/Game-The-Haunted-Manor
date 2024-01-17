@@ -23,7 +23,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_left = 126.0
 offset_top = 510.0
-offset_right = 1084.0
+offset_right = 1321.0
 offset_bottom = 640.0
 theme = SubResource("Theme_nqd8s")
 color = Color(0, 0, 0, 1)
@@ -41,9 +41,9 @@ texture = ExtResource("1_pfkj3")
 
 [node name="Name" type="RichTextLabel" parent="Dialog Box"]
 layout_mode = 0
-offset_left = 219.0
+offset_left = 253.0
 offset_top = 19.0
-offset_right = 959.0
+offset_right = 938.0
 offset_bottom = 54.0
 theme_override_font_sizes/normal_font_size = 15
 
