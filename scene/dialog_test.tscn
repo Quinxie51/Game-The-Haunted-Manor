@@ -1,45 +1,55 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl3y83u7uvp5i"]
+[gd_scene load_steps=5 format=3 uid="uid://dl3y83u7uvp5i"]
 
 [ext_resource type="Script" path="res://script/Dialog Box.gd" id="1_4slrf"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_j1db2"]
 [ext_resource type="Texture2D" uid="uid://bnlcjwkhsmmju" path="res://asset/other/woman figure.png" id="1_pfkj3"]
+
+[sub_resource type="Theme" id="Theme_nqd8s"]
+default_font = ExtResource("1_j1db2")
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -9.0
+offset_left = -11.0
 offset_top = -5.0
-offset_right = -9.0
+offset_right = -11.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Dialog Box" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 174.0
-offset_top = 495.0
-offset_right = 1132.0
-offset_bottom = 625.0
+offset_left = 126.0
+offset_top = 510.0
+offset_right = 1084.0
+offset_bottom = 640.0
+theme = SubResource("Theme_nqd8s")
+color = Color(0, 0, 0, 1)
 script = ExtResource("1_4slrf")
+
+[node name="Indicator" type="Polygon2D" parent="Dialog Box"]
+position = Vector2(-174, -495)
+
+[node name="Portrait" type="Sprite2D" parent="Dialog Box"]
+position = Vector2(120, -167)
+scale = Vector2(0.466669, 0.447948)
+texture = ExtResource("1_pfkj3")
+
+[node name="Timer" type="Timer" parent="Dialog Box"]
 
 [node name="Name" type="RichTextLabel" parent="Dialog Box"]
 layout_mode = 0
+offset_left = 219.0
+offset_top = 19.0
 offset_right = 959.0
-offset_bottom = 39.0
+offset_bottom = 54.0
+theme_override_font_sizes/normal_font_size = 15
 
 [node name="Text" type="RichTextLabel" parent="Dialog Box"]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 38.0
+offset_left = 248.0
+offset_top = 56.0
 offset_right = 938.0
 offset_bottom = 102.0
-
-[node name="Indicator" type="Polygon2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(149, 494)
-scale = Vector2(0.34667, 0.332763)
-texture = ExtResource("1_pfkj3")
-
-[node name="Timer" type="Timer" parent="."]
