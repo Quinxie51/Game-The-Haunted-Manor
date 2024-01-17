@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://de5we43erlwy5"]
+
+[ext_resource type="Texture2D" uid="uid://dfdm2xyed6vsx" path="res://asset/background/living roon/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_living_room_in_European_style-01.png" id="1_4fnvf"]
+
+[node name="living room" type="Node2D"]
+
+[node name="living room image" type="Sprite2D" parent="."]
+position = Vector2(574.203, 319.5)
+scale = Vector2(0.62793, 0.62793)
+texture = ExtResource("1_4fnvf")

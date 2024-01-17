@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4k8yogiy44eh"]
+
+[ext_resource type="Texture2D" uid="uid://ctahu4t4p1ybh" path="res://asset/background/bedroom/bedroom2.png" id="1_phway"]
+
+[node name="bedroom" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(596.797, 340.5)
+scale = Vector2(0.670898, 0.670898)
+texture = ExtResource("1_phway")
