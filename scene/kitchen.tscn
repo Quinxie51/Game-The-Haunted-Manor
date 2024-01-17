@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://q7wob65hh5tc"]
 
-[ext_resource type="Texture2D" uid="uid://gkpovaktftk2" path="res://asset/background/kitchen/a_post_apocalyptic_future_world_hundreds_of_years_after_the_end_of_civilization_with_a_lot_of_furniture_a_haunted_kitchen_in_European_style-01.png" id="1_6b0go"]
+[ext_resource type="Texture2D" uid="uid://bcrqjtuhak7gd" path="res://asset/background/kitchen/kitchen.png" id="1_cumj1"]
 
 [node name="kitchen" type="Node2D"]
 
 [node name="kitchen image" type="Sprite2D" parent="."]
-position = Vector2(582, 336)
+position = Vector2(588, 344)
 scale = Vector2(0.644531, 0.644531)
-texture = ExtResource("1_6b0go")
+texture = ExtResource("1_cumj1")
