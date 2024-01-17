@@ -13,7 +13,7 @@ script = ExtResource("1_okd6m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="APostApocalypticFutureWorldHundredsOfYearsAfterTheEndOfCivilizationWithALotOfFurnitureAHauntedKitchenInEuropeanStyle-01" type="Sprite2D" parent="."]
+[node name="outside manor" type="Sprite2D" parent="."]
 position = Vector2(385.908, 367.384)
 texture = ExtResource("2_bjm82")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
-[ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/background/living roon/living room.png" id="1_jl6h5"]
+[ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/background/living room/living room.png" id="1_jl6h5"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="3_0clsr"]
 
 [node name="living room" type="Node2D"]
