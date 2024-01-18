@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb6cd8jjdhdrg"]
+[gd_scene load_steps=7 format=3 uid="uid://cb6cd8jjdhdrg"]
+
+[ext_resource type="Script" path="res://script/particles.gd" id="1_3s7br"]
 
 [sub_resource type="Curve" id="Curve_r6rmx"]
 min_value = -360.0
@@ -25,6 +27,7 @@ spread = 180.0
 initial_velocity_min = 100.0
 initial_velocity_max = 100.0
 gravity = Vector3(0, 0, 0)
+scale_max = 3.0
 scale_curve = SubResource("CurveTexture_fvavu")
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
@@ -33,3 +36,11 @@ amount = 30
 process_material = SubResource("ParticleProcessMaterial_ua6sb")
 lifetime = 2.0
 explosiveness = 1.0
+script = ExtResource("1_3s7br")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
