@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://q7wob65hh5tc"]
 
-[ext_resource type="Texture2D" uid="uid://bcrqjtuhak7gd" path="res://asset/background/kitchen/kitchen.png" id="1_cumj1"]
+[ext_resource type="Texture2D" uid="uid://q4k8ngle40st" path="res://asset/background/kitchen/kitchen 3.png" id="1_n4hmi"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_spi1m"]
 [ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_32kwi"]
 [ext_resource type="PackedScene" uid="uid://000swqerq8m7" path="res://scene/pressZoom.tscn" id="4_elu1k"]
@@ -8,9 +8,9 @@
 [node name="kitchen" type="Node2D"]
 
 [node name="kitchen image" type="Sprite2D" parent="."]
-position = Vector2(588, 344)
-scale = Vector2(0.644531, 0.644531)
-texture = ExtResource("1_cumj1")
+position = Vector2(580.5, 334)
+scale = Vector2(0.748047, 0.748047)
+texture = ExtResource("1_n4hmi")
 
 [node name="exit kitchen" parent="." instance=ExtResource("2_spi1m")]
 position = Vector2(117, 344)
@@ -24,7 +24,7 @@ scale = Vector2(0.249954, 0.249954)
 texture = ExtResource("3_32kwi")
 
 [node name="PortalArea" parent="." instance=ExtResource("4_elu1k")]
-position = Vector2(640, 468)
+position = Vector2(295, 234)
 rotation = 1.60874
 scale = Vector2(1, 1.52418)
-targetScene = "dinning_table"
+targetScene = "kitchen_corner"

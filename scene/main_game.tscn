@@ -9,10 +9,6 @@ position = Vector2(344, 94)
 scale = Vector2(0.647823, 0.647823)
 script = ExtResource("1_okd6m")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
 [node name="outside manor" type="Sprite2D" parent="."]
 position = Vector2(385.908, 367.384)
 texture = ExtResource("2_bjm82")
