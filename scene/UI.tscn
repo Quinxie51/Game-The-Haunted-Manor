@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://feq2q57r83ne"]
+[gd_scene load_steps=2 format=3 uid="uid://feq2q57r83ne"]
 
 [ext_resource type="PackedScene" uid="uid://daqgpwslovm8i" path="res://scene/slot.tscn" id="1_vo8ms"]
-[ext_resource type="Texture2D" uid="uid://bygipgp03sb28" path="res://asset/other/board.png" id="2_oynnp"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -11,7 +10,7 @@ anchors_preset = 0
 offset_right = 1127.0
 offset_bottom = 210.0
 
-[node name="GridContainer" type="GridContainer" parent="UI"]
+[node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
 offset_left = 1018.0
 offset_top = -3.0
@@ -19,35 +18,17 @@ offset_right = 1148.0
 offset_bottom = 663.0
 scale = Vector2(0.950685, 0.96)
 
-[node name="slot" parent="UI/GridContainer" instance=ExtResource("1_vo8ms")]
+[node name="slot" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
 
-[node name="slot2" parent="UI/GridContainer" instance=ExtResource("1_vo8ms")]
+[node name="slot2" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
 
-[node name="slot3" parent="UI/GridContainer" instance=ExtResource("1_vo8ms")]
+[node name="slot3" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
 
-[node name="slot4" parent="UI/GridContainer" instance=ExtResource("1_vo8ms")]
+[node name="slot4" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
 
-[node name="slot5" parent="UI/GridContainer" instance=ExtResource("1_vo8ms")]
-layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="UI"]
-layout_mode = 0
-offset_left = 1.0
-offset_right = 41.0
-offset_bottom = 40.0
-scale = Vector2(25.4255, 2.76504)
-texture = ExtResource("2_oynnp")
-
-[node name="GridContainer" type="GridContainer" parent="UI/NinePatchRect"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.4, 0.4)
-
-[node name="Label" type="Label" parent="UI/NinePatchRect/GridContainer"]
+[node name="slot5" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2

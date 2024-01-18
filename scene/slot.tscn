@@ -14,3 +14,8 @@ scale = Vector2(0.819683, 0.810401)
 scale = Vector2(0.24, 0.24594)
 texture = ExtResource("1_nxtxv")
 centered = false
+
+[node name="placeHolder" type="TextureRect" parent="Sprite2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(14.045, 14.045)

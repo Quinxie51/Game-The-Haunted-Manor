@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnkdt54k43pj"]
+
+[ext_resource type="Script" path="res://script/vanish_object.gd" id="1_w0w7j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5m5y"]
+radius = 60.3812
+
+[node name="vanish object" type="Area2D"]
+position = Vector2(-4, 2)
+script = ExtResource("1_w0w7j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_v5m5y")
+
+[connection signal="input_event" from="." to="." method="_on_portal_area_input_event"]
