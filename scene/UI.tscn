@@ -36,9 +36,18 @@ layout_mode = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="UI"]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 32.0
-offset_right = 87.0
-offset_bottom = 72.0
-scale = Vector2(23.2655, 3.28504)
+offset_left = 1.0
+offset_right = 41.0
+offset_bottom = 40.0
+scale = Vector2(25.4255, 2.76504)
 texture = ExtResource("2_oynnp")
+
+[node name="GridContainer" type="GridContainer" parent="UI/NinePatchRect"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.4, 0.4)
+
+[node name="Label" type="Label" parent="UI/NinePatchRect/GridContainer"]
+layout_mode = 2
