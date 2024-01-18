@@ -10,9 +10,7 @@ func _on_bedroom_door_input_event(viewport, event, shape_idx):
 
 
 func _process(delta):
-	# Get the global position of the mouse cursor
 	var target_position = get_global_mouse_position()
-	# Smoothly move the light node towards the mouse cursor using linear_interpolate
-	light_node.global_position = light_node.global_position.lerp(target_position, follow_speed * delta)
+	light_node.global_position = Vector2i(target_position)
 
 
