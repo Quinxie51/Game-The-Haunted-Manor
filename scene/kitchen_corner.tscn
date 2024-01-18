@@ -23,6 +23,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Kettle" type="Label" parent="UI"]
+layout_mode = 0
 offset_left = 165.5
 offset_top = 49.0
 offset_right = 211.5
