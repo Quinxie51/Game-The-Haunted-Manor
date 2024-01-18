@@ -16,18 +16,17 @@ texture = ExtResource("1_lemb1")
 position = Vector2(492, 555)
 scale = Vector2(0.759998, 0.759998)
 
-[node name="Control" type="Control" parent="."]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Kettle" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 27.0
-offset_right = 113.0
-offset_bottom = 50.0
+[node name="Kettle" type="Label" parent="UI"]
+offset_left = 165.5
+offset_top = 49.0
+offset_right = 211.5
+offset_bottom = 72.0
 scale = Vector2(1.4, 1.4)
 text = "Kettle
 "

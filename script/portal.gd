@@ -3,6 +3,8 @@ extends Area2D
 @onready var kettle : Label
 @onready var EFFECT = preload("res://scene/particles.tscn")
 
+func _ready():
+	var kettle = $Kettle
 
 func _on_input_event(viewport, event, shape_idx):
 	if event.is_pressed():
