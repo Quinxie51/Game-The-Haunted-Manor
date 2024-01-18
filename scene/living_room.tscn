@@ -7,7 +7,6 @@
 
 [node name="living room" type="Node2D"]
 script = ExtResource("1_ikd2p")
-follow_speed = null
 
 [node name="living room image" type="Sprite2D" parent="."]
 position = Vector2(570, 319)
