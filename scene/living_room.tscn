@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://c2565jkijranq" path="res://asset/other/flashlight.png" id="3_qga2b"]
 [ext_resource type="Texture2D" uid="uid://d2wyximxx6hlk" path="res://asset/background/living room/341-4.png" id="5_2hbsl"]
 [ext_resource type="Texture2D" uid="uid://baevjt47jtw2f" path="res://asset/background/341-8.png" id="5_yxxhb"]
-[ext_resource type="Texture2D" uid="uid://cfmppm10ptqfd" path="res://asset/background/2.png" id="8_46upb"]
 [ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/background/341-9.png" id="8_phl1q"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5rrp2"]
+load_path = "res://.godot/imported/2.png-f3ca9bd294cf5a09cfda554472dc6f2f.ctex"
 
 [node name="living room" type="Node2D"]
 position = Vector2(-2, -1)
@@ -52,7 +54,7 @@ offset_right = 1184.77
 offset_bottom = 1532.93
 rotation = -0.102086
 scale = Vector2(0.0207628, 0.0175772)
-texture = ExtResource("8_46upb")
+texture = SubResource("CompressedTexture2D_5rrp2")
 
 [node name="341" type="TextureRect" parent="."]
 offset_left = 982.654
