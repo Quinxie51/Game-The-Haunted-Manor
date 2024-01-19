@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://oymnwimbwm03" path="res://asset/other/frame.png" id="1_nxtxv"]
 
-[node name="slot" type="Panel"]
+[node name="FlashLight" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(130, 130)
 offset_top = -13.0
@@ -15,7 +15,7 @@ scale = Vector2(0.24, 0.24594)
 texture = ExtResource("1_nxtxv")
 centered = false
 
-[node name="placeHolder" type="TextureRect" parent="Sprite2D"]
+[node name="flashlight" type="TextureRect" parent="Sprite2D"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2(14.045, 14.045)
+scale = Vector2(0.549564, 0.493768)
