@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkjx8cnvhb766"]
+
+[ext_resource type="Script" path="res://script/win_kitchen.gd" id="1_pecl6"]
+[ext_resource type="Texture2D" uid="uid://dibyk4kg0smur" path="res://asset/background/living room/container.png" id="2_w0h23"]
+[ext_resource type="Texture2D" uid="uid://dlc0hvknkh0td" path="res://asset/background/living room/341.png" id="3_0bwmd"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="4_2qlhv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqmn3"]
+font = ExtResource("4_2qlhv")
+font_size = 30
+outline_size = 5
+outline_color = Color(0.266667, 0.113725, 0, 1)
+shadow_size = 5
+shadow_color = Color(0.368627, 0.137255, 0, 0)
+shadow_offset = Vector2(5, 5)
+
+[node name="Win kitchen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pecl6")
+
+[node name="frame" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 71.0
+offset_right = 879.0
+offset_bottom = 750.0
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("2_w0h23")
+
+[node name="flashlight" type="TextureRect" parent="frame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.147
+offset_top = -174.794
+offset_right = 820.853
+offset_bottom = 905.206
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.447938, 0.392351)
+texture = ExtResource("3_0bwmd")
+
+[node name="congrat" type="Label" parent="frame"]
+layout_mode = 0
+offset_left = 92.6471
+offset_top = 158.824
+offset_right = 390.647
+offset_bottom = 221.824
+text = "Congratulation! 
+You found a flashlight!
+"
+label_settings = SubResource("LabelSettings_eqmn3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="claim" type="Button" parent="frame"]
+self_modulate = Color(1, 0.678431, 0, 1)
+layout_mode = 0
+offset_left = 182.353
+offset_top = 517.647
+offset_right = 234.353
+offset_bottom = 548.647
+scale = Vector2(1.76659, 1.76659)
+text = "Claim"
+icon_alignment = 1
+
+[connection signal="pressed" from="frame/claim" to="." method="_on_claim_pressed"]

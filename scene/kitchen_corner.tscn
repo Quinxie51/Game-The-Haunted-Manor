@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl5naqfkdsyp4"]
+[gd_scene load_steps=7 format=3 uid="uid://bl5naqfkdsyp4"]
 
 [ext_resource type="Texture2D" uid="uid://dkgg4s2s1121h" path="res://asset/background/kitchen/kitchen corner.png" id="1_lemb1"]
 [ext_resource type="Script" path="res://script/kitchen_corner.gd" id="1_u085r"]
 [ext_resource type="PackedScene" uid="uid://ddnkdt54k43pj" path="res://scene/vanish_object.tscn" id="3_8mt5b"]
 [ext_resource type="PackedScene" uid="uid://feq2q57r83ne" path="res://scene/UI.tscn" id="4_5k5wn"]
-[ext_resource type="Texture2D" uid="uid://bygipgp03sb28" path="res://asset/other/board.png" id="4_qgq1n"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="6_b722t"]
 [ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="7_5lkor"]
 
@@ -12,8 +11,8 @@
 script = ExtResource("1_u085r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(517, 371)
-scale = Vector2(0.670348, 0.625125)
+position = Vector2(484, 329)
+scale = Vector2(0.735273, 0.711011)
 texture = ExtResource("1_lemb1")
 
 [node name="cilantro" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
@@ -29,9 +28,10 @@ vanishObject = NodePath("../../Objects/Kettle")
 position = Vector2(662.343, 57.5885)
 vanishObject = NodePath("../../Objects/Tea pot")
 
-[node name="vase" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
-position = Vector2(-350.564, -222.356)
-vanishObject = NodePath("../../Objects/Vase")
+[node name="grape" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(-301.929, 54.8514)
+scale = Vector2(0.838915, 0.504922)
+vanishObject = NodePath("../../Objects/Grape")
 
 [node name="broccoli" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(246.141, 326.335)
@@ -60,31 +60,11 @@ vanishObject = NodePath("../../Objects/Pan")
 
 [node name="UI" parent="." instance=ExtResource("4_5k5wn")]
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-visible = false
-offset_left = 1.0
-offset_right = 41.0
-offset_bottom = 40.0
-scale = Vector2(25.4255, 2.76504)
-texture = ExtResource("4_qgq1n")
-
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
-visible = false
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.4, 0.4)
-
-[node name="Kettle" type="Label" parent="NinePatchRect/GridContainer"]
-visible = false
-layout_mode = 2
-text = "Kettle
-"
-
 [node name="Objects" type="ColorRect" parent="."]
+offset_top = -6.0
 offset_right = 1029.0
-offset_bottom = 92.0
+offset_bottom = 86.0
+scale = Vector2(1.04037, 0.915131)
 color = Color(0.333333, 0.207843, 0.121569, 1)
 
 [node name="Kettle" type="Label" parent="Objects"]
@@ -107,15 +87,14 @@ scale = Vector2(1.36, 1.36)
 text = "Tea pot
 "
 
-[node name="Vase" type="Label" parent="Objects"]
+[node name="Grape" type="Label" parent="Objects"]
 layout_mode = 0
-offset_left = 523.0
-offset_top = 44.0
-offset_right = 616.0
-offset_bottom = 93.0
+offset_left = 558.453
+offset_top = 50.266
+offset_right = 651.453
+offset_bottom = 99.266
 scale = Vector2(1.36, 1.36)
-text = "Flower Vase
-
+text = "Grape
 "
 
 [node name="Broccoli" type="Label" parent="Objects"]

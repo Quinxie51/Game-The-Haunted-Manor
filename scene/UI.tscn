@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://feq2q57r83ne"]
+[gd_scene load_steps=4 format=3 uid="uid://feq2q57r83ne"]
 
+[ext_resource type="Script" path="res://script/UI.gd" id="1_5imsx"]
 [ext_resource type="PackedScene" uid="uid://daqgpwslovm8i" path="res://scene/slot.tscn" id="1_vo8ms"]
+[ext_resource type="PackedScene" uid="uid://bkjx8cnvhb766" path="res://scene/win_kitchen.tscn" id="2_xf6po"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="UILayer" type="CanvasLayer"]
+script = ExtResource("1_5imsx")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -32,3 +35,6 @@ layout_mode = 2
 
 [node name="slot5" parent="UI/Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
+
+[node name="Win_kitchen" parent="." instance=ExtResource("2_xf6po")]
+visible = false
