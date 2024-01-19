@@ -6,7 +6,7 @@ var message_printed = false
 
 func _physics_process(delta):
 	if objects.get_child_count() == 0 and not message_printed:
-		await get_tree().create_timer(1.5).timeout
+		await get_tree().create_timer(1).timeout
 		ui_layer.show_win_screen(true)
 		objects.hide()
 		message_printed = true
