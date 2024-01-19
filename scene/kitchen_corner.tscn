@@ -14,17 +14,47 @@ position = Vector2(517, 371)
 scale = Vector2(0.670348, 0.625125)
 texture = ExtResource("1_lemb1")
 
-[node name="vanish object" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="cilantro" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(517.642, 207.958)
+scale = Vector2(1.09747, 0.466213)
+vanishObject = NodePath("../../Objects/Cilantro")
+
+[node name="kettle" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(-116.357, 302.34)
 vanishObject = NodePath("../../Objects/Kettle")
 
-[node name="vanish object2" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
-position = Vector2(481.839, -15.9968)
-vanishObject = NodePath("../../Objects/Lamp")
+[node name="tea pot" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(662.343, 57.5885)
+vanishObject = NodePath("../../Objects/Tea pot")
 
-[node name="vanish object3" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="vase" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(-350.564, -222.356)
 vanishObject = NodePath("../../Objects/Vase")
+
+[node name="broccoli" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(246.141, 326.335)
+scale = Vector2(0.820981, 0.820981)
+vanishObject = NodePath("../../Objects/Broccoli")
+
+[node name="mango" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(88.014, 60.7878)
+scale = Vector2(0.395255, 0.386907)
+vanishObject = NodePath("../../Objects/Mango")
+
+[node name="oil" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(10.4423, 350.33)
+scale = Vector2(0.429438, 0.770831)
+vanishObject = NodePath("../../Objects/Oil")
+
+[node name="potato" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(-408.743, 423.915)
+scale = Vector2(-0.616381, 0.276774)
+vanishObject = NodePath("../../Objects/Potato")
+
+[node name="pan" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+position = Vector2(114.866, -19.1961)
+scale = Vector2(0.777898, 0.635041)
+vanishObject = NodePath("../../Objects/Pan")
 
 [node name="UI" parent="." instance=ExtResource("4_5k5wn")]
 
@@ -57,29 +87,88 @@ color = Color(0.333333, 0.207843, 0.121569, 1)
 
 [node name="Kettle" type="Label" parent="Objects"]
 layout_mode = 0
-offset_left = 164.0
-offset_top = 36.0
-offset_right = 210.0
-offset_bottom = 59.0
+offset_left = 757.0
+offset_top = 10.0
+offset_right = 803.0
+offset_bottom = 33.0
 scale = Vector2(1.36, 1.36)
 text = "Kettle
 "
 
-[node name="Lamp" type="Label" parent="Objects"]
+[node name="Tea pot" type="Label" parent="Objects"]
 layout_mode = 0
-offset_left = 346.0
-offset_top = 35.0
-offset_right = 392.0
-offset_bottom = 58.0
+offset_left = 547.0
+offset_top = 10.0
+offset_right = 605.0
+offset_bottom = 33.0
 scale = Vector2(1.36, 1.36)
-text = "Lamp"
+text = "Tea pot
+"
 
 [node name="Vase" type="Label" parent="Objects"]
 layout_mode = 0
-offset_left = 514.0
-offset_top = 37.0
-offset_right = 560.0
+offset_left = 523.0
+offset_top = 44.0
+offset_right = 616.0
+offset_bottom = 93.0
+scale = Vector2(1.36, 1.36)
+text = "Flower Vase
+
+"
+
+[node name="Broccoli" type="Label" parent="Objects"]
+offset_left = 384.0
+offset_top = 43.0
+offset_right = 446.0
+offset_bottom = 92.0
+scale = Vector2(1.36, 1.36)
+text = "Broccoli
+
+"
+
+[node name="Mango" type="Label" parent="Objects"]
+offset_left = 751.0
+offset_top = 47.0
+offset_right = 804.0
+offset_bottom = 70.0
+scale = Vector2(1.36, 1.36)
+text = "Mango
+"
+
+[node name="Pan" type="Label" parent="Objects"]
+offset_left = 400.0
+offset_top = 9.00001
+offset_right = 446.0
+offset_bottom = 32.0
+scale = Vector2(1.36, 1.36)
+text = "Pan
+"
+
+[node name="Cilantro" type="Label" parent="Objects"]
+offset_left = 220.0
+offset_top = 42.0
+offset_right = 282.0
+offset_bottom = 65.0
+scale = Vector2(1.36, 1.36)
+text = "Cilantro
+"
+
+[node name="Oil" type="Label" parent="Objects"]
+offset_left = 246.0
+offset_top = 11.0
+offset_right = 292.0
 offset_bottom = 60.0
 scale = Vector2(1.36, 1.36)
 text = "Oil
+
+"
+
+[node name="Potato" type="Label" parent="Objects"]
+offset_left = 88.0
+offset_top = 21.0
+offset_right = 140.0
+offset_bottom = 70.0
+scale = Vector2(1.36, 1.36)
+text = "Potato
+
 "
