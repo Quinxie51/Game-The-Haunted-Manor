@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://de5we43erlwy5"]
+[gd_scene load_steps=9 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/background/living room/living room.png" id="1_jl6h5"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="3_0clsr"]
 [ext_resource type="Texture2D" uid="uid://c2565jkijranq" path="res://asset/other/flashlight.png" id="3_qga2b"]
-[ext_resource type="Texture2D" uid="uid://dqkgnc8p8eydo" path="res://asset/background/living room/3.png" id="5_qncnt"]
-[ext_resource type="Texture2D" uid="uid://blt72e15i1odg" path="res://asset/background/living room/4.png" id="6_61ttx"]
-[ext_resource type="Texture2D" uid="uid://bemhtnop8lynk" path="res://asset/background/living room/341-3.png" id="7_ubq35"]
+[ext_resource type="Texture2D" uid="uid://d2wyximxx6hlk" path="res://asset/background/living room/341-4.png" id="5_2hbsl"]
+[ext_resource type="Texture2D" uid="uid://baevjt47jtw2f" path="res://asset/background/341-8.png" id="5_yxxhb"]
+[ext_resource type="Texture2D" uid="uid://cfmppm10ptqfd" path="res://asset/background/2.png" id="8_46upb"]
+[ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/background/341-9.png" id="8_phl1q"]
 
 [node name="living room" type="Node2D"]
 position = Vector2(-2, -1)
@@ -20,7 +21,7 @@ scale = Vector2(0.62793, 0.62793)
 texture = ExtResource("1_jl6h5")
 
 [node name="Light2D" type="PointLight2D" parent="."]
-position = Vector2(196.756, 118.505)
+position = Vector2(209.986, 128.735)
 scale = Vector2(0.62793, 0.62793)
 energy = 4.43
 shadow_enabled = true
@@ -31,33 +32,42 @@ position = Vector2(583, 299)
 targetScene = "bedroom"
 
 [node name="KitchenDoor" parent="." instance=ExtResource("3_0clsr")]
-position = Vector2(405, 339)
+position = Vector2(401.498, 321.369)
 scale = Vector2(1.24, 1.28)
 targetScene = "kitchen"
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 338.419
-offset_top = 203.984
-offset_right = 1418.42
-offset_bottom = 1283.98
-rotation = 1.57708
-scale = Vector2(0.0263201, 0.0263201)
-texture = ExtResource("5_qncnt")
+[node name="709" type="TextureRect" parent="."]
+offset_left = 981.168
+offset_top = 552.532
+offset_right = 2061.17
+offset_bottom = 1632.53
+rotation = 0.32299
+scale = Vector2(0.040971, 0.0336035)
+texture = ExtResource("5_yxxhb")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = 776.2
-offset_top = 487.62
-offset_right = 1856.2
-offset_bottom = 1567.62
-rotation = 1.57169
-scale = Vector2(0.0263201, 0.0263201)
-texture = ExtResource("6_61ttx")
+[node name="527" type="TextureRect" parent="."]
+offset_left = 104.769
+offset_top = 452.934
+offset_right = 1184.77
+offset_bottom = 1532.93
+rotation = -0.102086
+scale = Vector2(0.0207628, 0.0175772)
+texture = ExtResource("8_46upb")
 
-[node name="TextureRect3" type="TextureRect" parent="."]
-offset_left = 964.712
-offset_top = 119.085
-offset_right = 2044.71
-offset_bottom = 1199.09
+[node name="341" type="TextureRect" parent="."]
+offset_left = 982.654
+offset_top = 264.037
+offset_right = 2062.66
+offset_bottom = 1344.04
 rotation = 1.56397
-scale = Vector2(0.0268758, 0.0268758)
-texture = ExtResource("7_ubq35")
+scale = Vector2(0.0308598, 0.0324511)
+texture = ExtResource("5_2hbsl")
+
+[node name="526" type="TextureRect" parent="."]
+offset_left = 592.231
+offset_top = 579.079
+offset_right = 1672.23
+offset_bottom = 1659.08
+rotation = -0.321331
+scale = Vector2(0.0318169, 0.0311771)
+texture = ExtResource("8_phl1q")
