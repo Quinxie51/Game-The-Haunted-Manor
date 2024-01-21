@@ -1,4 +1,25 @@
-[gd_scene format=3 uid="uid://cc2bgu7xeeiwt"]
+[gd_scene load_steps=8 format=3 uid="uid://cc2bgu7xeeiwt"]
+
+[ext_resource type="Script" path="res://script/keypad.gd" id="1_cwx20"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_ekasq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u50jd"]
+content_margin_top = 50.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4lpg"]
+font = ExtResource("1_ekasq")
+font_size = 150
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jiysu"]
+content_margin_top = 40.0
+content_margin_bottom = 20.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ghjn"]
+font = ExtResource("1_ekasq")
+font_size = 40
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_kuum3"]
 
 [node name="Keypad" type="Control"]
 layout_mode = 3
@@ -7,17 +28,155 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cwx20")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_direction = 1
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u50jd")
+text = "
+"
+label_settings = SubResource("LabelSettings_f4lpg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jiysu")
+label_settings = SubResource("LabelSettings_8ghjn")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Button1" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "2"
+
+[node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "3"
+
+[node name="Button4" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="Button5" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "5"
+
+[node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "6"
+
+[node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "7"
+
+[node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_kuum3")
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "8"
+
+[node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "9"
+
+[node name="Button C" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "C"
+
+[node name="Button 0" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "0
+"
+
+[node name="Ok" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
+text = "OK
+"
+
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button C" to="." method="_on_button_c_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Button 0" to="." method="_on_button_0_pressed"]
+[connection signal="pressed" from="VBoxContainer/GridContainer/Ok" to="." method="_on_ok_pressed"]
