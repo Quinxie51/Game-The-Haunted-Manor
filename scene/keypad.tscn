@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cc2bgu7xeeiwt"]
+[gd_scene load_steps=18 format=3 uid="uid://cc2bgu7xeeiwt"]
 
 [ext_resource type="Script" path="res://script/keypad.gd" id="1_cwx20"]
 [ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_ekasq"]
+[ext_resource type="Texture2D" uid="uid://bygipgp03sb28" path="res://asset/other/board.png" id="2_exhxj"]
+
+[sub_resource type="Theme" id="Theme_dv6lk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u50jd"]
-content_margin_top = 50.0
+content_margin_top = 60.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_f4lpg"]
 font = ExtResource("1_ekasq")
@@ -17,7 +20,31 @@ content_margin_bottom = 20.0
 [sub_resource type="LabelSettings" id="LabelSettings_8ghjn"]
 font = ExtResource("1_ekasq")
 font_size = 40
-font_color = Color(1, 0, 0, 1)
+font_color = Color(0.368627, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66hm2"]
+bg_color = Color(0.223529, 0.109804, 0.0117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xo5m7"]
+bg_color = Color(0.431373, 0.164706, 0.0627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wlm2"]
+bg_color = Color(0.298039, 0.105882, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv7ki"]
+bg_color = Color(0.431373, 0.164706, 0.0627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwdfb"]
+bg_color = Color(0.223529, 0.109804, 0.0117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1upmq"]
+bg_color = Color(0.431373, 0.164706, 0.0627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s56xk"]
+bg_color = Color(0.462745, 0.219608, 0.0705882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkcrt"]
+bg_color = Color(0.431373, 0.164706, 0.0627451, 1)
 
 [sub_resource type="Theme" id="Theme_kuum3"]
 
@@ -26,8 +53,14 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 249.0
+offset_top = 131.0
+offset_right = 249.0
+offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.601737, 0.601737)
+size_flags_horizontal = 4
 script = ExtResource("1_cwx20")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -42,10 +75,11 @@ grow_vertical = 2
 layout_direction = 1
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_dv6lk")
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("2_exhxj")
 
 [node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
@@ -75,6 +109,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_66hm2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xo5m7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1wlm2")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cv7ki")
 text = "1"
 
 [node name="Button2" type="Button" parent="VBoxContainer/GridContainer"]
@@ -83,6 +121,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "2"
 
 [node name="Button3" type="Button" parent="VBoxContainer/GridContainer"]
@@ -91,6 +133,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "3"
 
 [node name="Button4" type="Button" parent="VBoxContainer/GridContainer"]
@@ -99,6 +145,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "4"
 
 [node name="Button5" type="Button" parent="VBoxContainer/GridContainer"]
@@ -107,6 +157,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "5"
 
 [node name="Button6" type="Button" parent="VBoxContainer/GridContainer"]
@@ -115,6 +169,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "6"
 
 [node name="Button7" type="Button" parent="VBoxContainer/GridContainer"]
@@ -123,6 +181,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "7"
 
 [node name="Button8" type="Button" parent="VBoxContainer/GridContainer"]
@@ -132,6 +194,10 @@ size_flags_vertical = 3
 theme = SubResource("Theme_kuum3")
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "8"
 
 [node name="Button9" type="Button" parent="VBoxContainer/GridContainer"]
@@ -140,6 +206,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "9"
 
 [node name="Button C" type="Button" parent="VBoxContainer/GridContainer"]
@@ -148,6 +218,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "C"
 
 [node name="Button 0" type="Button" parent="VBoxContainer/GridContainer"]
@@ -156,6 +230,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "0
 "
 
@@ -165,6 +243,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("1_ekasq")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwdfb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1upmq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s56xk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "OK
 "
 

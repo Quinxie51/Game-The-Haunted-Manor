@@ -3,9 +3,12 @@ const passWords = "123"
 
 @onready var label = $VBoxContainer/MarginContainer/Label
 @onready var status = $VBoxContainer/MarginContainer/Status
+@onready var red = Color(1,0,0)
+@onready var ui = $"/root/Ui"
 
 func _ready():
 	label.text = ""
+	ui.visible = false
 
 func key_press(digit):
 	if len(label.text) < 3:
@@ -54,13 +57,10 @@ func _on_button_c_pressed():
 func _on_button_0_pressed():
 	key_press(0)
 
-
 func _on_ok_pressed():
 	if label.text == passWords:
 		status.text = "Correct"
-		#status.text.add_theme_color_override("green")
+		
 	else:
+		status.add_theme_color_override("font_color", Color(1, 0, 0))
 		status.text = "Try again"
-		#status.text.add_theme_color_override("red")
-
-
