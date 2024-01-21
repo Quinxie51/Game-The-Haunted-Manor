@@ -12,5 +12,7 @@ func _on_bedroom_door_input_event(viewport, event, shape_idx):
 func _process(delta):
 	var target_position = get_global_mouse_position()
 	light_node.global_position = Vector2i(target_position)
+	
+		
 
 

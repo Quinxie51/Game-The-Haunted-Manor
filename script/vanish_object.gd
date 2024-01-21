@@ -10,4 +10,5 @@ func _on_portal_area_input_event(viewport, event, shape_idx):
 		effect.global_position = event.global_position
 		vanishObject.queue_free()
 		
+		
 
