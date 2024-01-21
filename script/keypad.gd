@@ -1,17 +1,18 @@
 extends Control
-const passWords = "123"
+const passWords = "1724"
 
 @onready var label = $VBoxContainer/MarginContainer/Label
 @onready var status = $VBoxContainer/MarginContainer/Status
 @onready var red = Color(1,0,0)
 @onready var ui = $"/root/Ui"
+@export var targetScene: String
 
 func _ready():
 	label.text = ""
 	ui.visible = false
 
 func key_press(digit):
-	if len(label.text) < 3:
+	if len(label.text) < 4:
 		label.text += str(digit)
 		
 		
@@ -60,7 +61,13 @@ func _on_button_0_pressed():
 func _on_ok_pressed():
 	if label.text == passWords:
 		status.text = "Correct"
-		
+		await get_tree().create_timer(1.5).timeout 
+		var targetScenePath = "res://scene/"+targetScene+".tscn"
+		get_tree().change_scene_to_file(targetScenePath)
 	else:
 		status.add_theme_color_override("font_color", Color(1, 0, 0))
 		status.text = "Try again"
+
+
+
+		
