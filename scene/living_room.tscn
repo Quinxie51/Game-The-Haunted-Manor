@@ -24,6 +24,7 @@ scale = Vector2(0.62793, 0.617803)
 texture = ExtResource("1_jl6h5")
 
 [node name="Light2D" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(209.986, 128.735)
 scale = Vector2(0.62793, 0.589116)
 energy = 4.43

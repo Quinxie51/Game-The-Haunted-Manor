@@ -68,7 +68,7 @@ func _on_ok_pressed():
 	else:
 		status.add_theme_color_override("font_color", Color(1, 0, 0))
 		status.text = "Try again"
-
-
-
 		
+
+func _on_button_pressed():
+	hide()

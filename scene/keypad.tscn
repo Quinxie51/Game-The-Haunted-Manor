@@ -1,10 +1,20 @@
-[gd_scene load_steps=17 format=3 uid="uid://cc2bgu7xeeiwt"]
+[gd_scene load_steps=20 format=3 uid="uid://cc2bgu7xeeiwt"]
 
 [ext_resource type="Script" path="res://script/keypad.gd" id="1_cwx20"]
 [ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_ekasq"]
 [ext_resource type="Texture2D" uid="uid://bygipgp03sb28" path="res://asset/other/board.png" id="2_exhxj"]
 
 [sub_resource type="Theme" id="Theme_dv6lk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fvl2v"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnh5o"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n1kq"]
+bg_color = Color(0.945098, 0.00392157, 0, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u50jd"]
 content_margin_top = 60.0
@@ -76,6 +86,19 @@ theme = SubResource("Theme_dv6lk")
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("2_exhxj")
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer/TextureRect"]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 2.0
+offset_right = 1148.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_fvl2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xnh5o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8n1kq")
+text = "X"
 
 [node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
@@ -248,6 +271,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_lkcrt")
 text = "OK
 "
 
+[connection signal="pressed" from="VBoxContainer/MarginContainer/TextureRect/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/GridContainer/Button3" to="." method="_on_button_3_pressed"]

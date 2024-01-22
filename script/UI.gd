@@ -10,8 +10,5 @@ func show_flashlight(show: bool):
 
 func show_keyPad(found:bool):
 	$Keypad.visible = found
-		
-	
-	
 	
 

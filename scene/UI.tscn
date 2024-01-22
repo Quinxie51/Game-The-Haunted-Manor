@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://feq2q57r83ne"]
+[gd_scene load_steps=7 format=3 uid="uid://feq2q57r83ne"]
 
 [ext_resource type="Script" path="res://script/UI.gd" id="1_5imsx"]
 [ext_resource type="PackedScene" uid="uid://daqgpwslovm8i" path="res://scene/slot.tscn" id="1_vo8ms"]
 [ext_resource type="PackedScene" uid="uid://bkjx8cnvhb766" path="res://scene/win_kitchen.tscn" id="2_xf6po"]
 [ext_resource type="Texture2D" uid="uid://dlc0hvknkh0td" path="res://asset/background/living room/341.png" id="3_rkdnw"]
+[ext_resource type="Script" path="res://script/slot.gd" id="4_16i2j"]
 [ext_resource type="PackedScene" uid="uid://cc2bgu7xeeiwt" path="res://scene/keypad.tscn" id="5_mv4no"]
 
 [node name="UILayer" type="CanvasLayer"]
@@ -18,6 +19,7 @@ scale = Vector2(0.950685, 0.96)
 
 [node name="FlashLight_claim" parent="Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
+script = ExtResource("4_16i2j")
 
 [node name="flashLight" type="TextureRect" parent="Inventory/FlashLight_claim"]
 visible = false
