@@ -60,6 +60,7 @@ func _on_button_0_pressed():
 
 func _on_ok_pressed():
 	if label.text == passWords:
+		status.add_theme_color_override("font_color", Color(0, 1, 0))
 		status.text = "Correct"
 		await get_tree().create_timer(1.5).timeout 
 		var targetScenePath = "res://scene/"+targetScene+".tscn"

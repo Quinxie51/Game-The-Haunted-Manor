@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cc2bgu7xeeiwt"]
+[gd_scene load_steps=17 format=3 uid="uid://cc2bgu7xeeiwt"]
 
 [ext_resource type="Script" path="res://script/keypad.gd" id="1_cwx20"]
 [ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_ekasq"]
@@ -16,11 +16,6 @@ font_size = 150
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jiysu"]
 content_margin_top = 40.0
 content_margin_bottom = 20.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_8ghjn"]
-font = ExtResource("1_ekasq")
-font_size = 40
-font_color = Color(0.368627, 1, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66hm2"]
 bg_color = Color(0.223529, 0.109804, 0.0117647, 1)
@@ -94,8 +89,10 @@ vertical_alignment = 1
 [node name="Status" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ekasq")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_jiysu")
-label_settings = SubResource("LabelSettings_8ghjn")
+text = "Enter passwords"
 horizontal_alignment = 1
 vertical_alignment = 2
 
