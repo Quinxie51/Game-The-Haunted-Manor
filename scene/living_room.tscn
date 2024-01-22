@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://de5we43erlwy5"]
+[gd_scene load_steps=10 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/background/living room/living room.png" id="1_jl6h5"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://script/bedroomDoor.gd" id="5_semv7"]
 [ext_resource type="Texture2D" uid="uid://baevjt47jtw2f" path="res://asset/background/living room/341-8.png" id="5_yxxhb"]
 [ext_resource type="Texture2D" uid="uid://bpd75gdrtkcar" path="res://asset/background/living room/2.png" id="6_kmvo2"]
-[ext_resource type="PackedScene" uid="uid://feq2q57r83ne" path="res://scene/UI.tscn" id="8_2fldl"]
 [ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/background/living room/341-9.png" id="8_phl1q"]
 
 [node name="living room" type="Node2D"]
@@ -76,5 +75,3 @@ offset_bottom = 1659.08
 rotation = -0.321331
 scale = Vector2(0.0318169, 0.0311771)
 texture = ExtResource("8_phl1q")
-
-[node name="UILayer" parent="." instance=ExtResource("8_2fldl")]

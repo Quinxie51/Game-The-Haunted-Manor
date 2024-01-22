@@ -6,6 +6,7 @@ const passWords = "1724"
 @onready var red = Color(1,0,0)
 @onready var ui = $"/root/Ui"
 @export var targetScene: String
+var password_found = false
 
 func _ready():
 	label.text = ""
@@ -62,13 +63,18 @@ func _on_ok_pressed():
 	if label.text == passWords:
 		status.add_theme_color_override("font_color", Color(0, 1, 0))
 		status.text = "Correct"
-		await get_tree().create_timer(1.5).timeout 
+		await get_tree().create_timer(1.5).timeout
+		password_found = true 
+		hide()
 		var targetScenePath = "res://scene/"+targetScene+".tscn"
 		get_tree().change_scene_to_file(targetScenePath)
 	else:
 		status.add_theme_color_override("font_color", Color(1, 0, 0))
 		status.text = "Try again"
 		
-
+func is_password_found():
+	return password_found
+	
 func _on_button_pressed():
 	hide()
+	label.text = ""
