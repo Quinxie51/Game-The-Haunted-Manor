@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+signal get_flashlight
+@onready var flash_slot = $Inventory/FlashLight_claim
+func _ready():
+	flash_slot.power_flashlight.connect(toggle_flashlight)
 
 func _process(delta):
 	var current_scene = get_tree().get_current_scene()
@@ -25,5 +29,9 @@ func show_keyPad(found:bool):
 				
 func get_keyPad():
 	return $Keypad
+
+func toggle_flashlight():
+	get_flashlight.emit()
+	return $Inventory/FlashLight_claim
 	
 
