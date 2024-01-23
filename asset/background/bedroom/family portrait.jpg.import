@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2565jkijranq"
-path="res://.godot/imported/flashlight.png-ca488e47cb4f84709399218147997813.ctex"
+uid="uid://q21d34r8rxsg"
+path="res://.godot/imported/family portrait.jpg-c3caaba94dae3a666a0589cb87f8c377.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/other/flashlight.png"
-dest_files=["res://.godot/imported/flashlight.png-ca488e47cb4f84709399218147997813.ctex"]
+source_file="res://asset/background/bedroom/family portrait.jpg"
+dest_files=["res://.godot/imported/family portrait.jpg-c3caaba94dae3a666a0589cb87f8c377.ctex"]
 
 [params]
 

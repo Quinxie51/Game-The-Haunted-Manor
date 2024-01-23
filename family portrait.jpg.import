@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctahu4t4p1ybh"
-path="res://.godot/imported/bedroom2.png-a164e263fbfc53d72ad583190c2917a8.ctex"
+uid="uid://b3kolfqgnl8og"
+path="res://.godot/imported/family portrait.jpg-b1a8a75b02f697d91f99be699d1ceafc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/background/bedroom/bedroom2.png"
-dest_files=["res://.godot/imported/bedroom2.png-a164e263fbfc53d72ad583190c2917a8.ctex"]
+source_file="res://family portrait.jpg"
+dest_files=["res://.godot/imported/family portrait.jpg-b1a8a75b02f697d91f99be699d1ceafc.ctex"]
 
 [params]
 

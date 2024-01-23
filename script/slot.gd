@@ -8,7 +8,6 @@ func _input(event):
 		var ev: InputEventMouseButton = event
 		if get_global_rect().has_point(ev.global_position):
 			power_flashlight.emit()
-			print("emited")
 			get_item = true
 					
 func activate_flashLight():

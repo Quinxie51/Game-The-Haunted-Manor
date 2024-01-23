@@ -10,8 +10,6 @@ func _ready():
 func _process(delta):
 	var target_position = get_global_mouse_position()
 	light_node.global_position = Vector2i(target_position)
-	
-		
 
 func turn_on_light():
 	light_node.visible = !light_node.visible

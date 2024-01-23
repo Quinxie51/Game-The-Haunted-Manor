@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/background/living room/living room.png" id="1_jl6h5"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="3_0clsr"]
-[ext_resource type="Texture2D" uid="uid://c2565jkijranq" path="res://asset/other/flashlight.png" id="3_qga2b"]
+[ext_resource type="Texture2D" uid="uid://c2565jkijranq" path="res://asset/background/living room/flashlight.png" id="3_qga2b"]
 [ext_resource type="Texture2D" uid="uid://d2wyximxx6hlk" path="res://asset/background/living room/341-4.png" id="5_2hbsl"]
 [ext_resource type="Script" path="res://script/bedroomDoor.gd" id="5_semv7"]
 [ext_resource type="Texture2D" uid="uid://baevjt47jtw2f" path="res://asset/background/living room/341-8.png" id="5_yxxhb"]
