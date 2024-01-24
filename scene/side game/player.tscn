@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjeitkicb5h6o"]
+
+[ext_resource type="Texture2D" uid="uid://bgln1386nlg20" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-idle/hat-man-idle-1.png" id="1_iqqsp"]
+[ext_resource type="Texture2D" uid="uid://buptuojmtgf6t" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-idle/hat-man-idle-2.png" id="2_d21sy"]
+[ext_resource type="Texture2D" uid="uid://b878lhi7pt1s7" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-idle/hat-man-idle-3.png" id="3_8ijo1"]
+[ext_resource type="Texture2D" uid="uid://bys0altkkderf" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-idle/hat-man-idle-4.png" id="4_jx4f8"]
+[ext_resource type="Texture2D" uid="uid://0fo225ptyyhc" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-1.png" id="5_i25cr"]
+[ext_resource type="Texture2D" uid="uid://dvd03qpy2awg5" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-2.png" id="6_0hsas"]
+[ext_resource type="Texture2D" uid="uid://c3n4ndvuw8tgb" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-3.png" id="7_u8l6n"]
+[ext_resource type="Texture2D" uid="uid://bshci4arrw2vc" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-4.png" id="8_hbhmc"]
+[ext_resource type="Texture2D" uid="uid://7vpelke125b3" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-5.png" id="9_n2cyb"]
+[ext_resource type="Texture2D" uid="uid://be2pocbiumn85" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-walk/hat-man-walk-6.png" id="10_qpomv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kikv6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqqsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d21sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ijo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jx4f8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_iqqsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d21sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ijo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jx4f8")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i25cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0hsas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u8l6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hbhmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n2cyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qpomv")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[node name="Player" type="Node2D"]
+position = Vector2(580, 327)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(53.75, 69.3333)
+scale = Vector2(2.47436, 2.47436)
+sprite_frames = SubResource("SpriteFrames_kikv6")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]

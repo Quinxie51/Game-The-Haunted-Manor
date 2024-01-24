@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxgiixpjpctr1"]
+
+[ext_resource type="Texture2D" uid="uid://q21d34r8rxsg" path="res://asset/room asset/bedroom/family portrait.jpg" id="1_kvmo2"]
+
+[node name="Puzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, 104)
+scale = Vector2(0.344, 0.344)
+texture = ExtResource("1_kvmo2")
+hframes = 4
+vframes = 4
+
+[node name="Number 1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Number 1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

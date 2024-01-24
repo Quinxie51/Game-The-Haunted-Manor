@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://script/bedroom.gd" id="1_wuu5j"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_6tnu1"]
-[ext_resource type="Texture2D" uid="uid://1ecyu66e3ayv" path="res://asset/background/bedroom/bedroom.png" id="2_s7vkk"]
+[ext_resource type="Texture2D" uid="uid://1ecyu66e3ayv" path="res://asset/room asset/bedroom/bedroom.png" id="2_s7vkk"]
 [ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_wixqj"]
 [ext_resource type="PackedScene" uid="uid://feq2q57r83ne" path="res://scene/UI.tscn" id="4_tb1l3"]
 

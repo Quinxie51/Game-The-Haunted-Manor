@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyuplye0kofja"]
 
 [ext_resource type="Script" path="res://script/main_game.gd" id="1_okd6m"]
-[ext_resource type="Texture2D" uid="uid://ctqxtudcwuf6r" path="res://asset/background/bedroom/outside manor.png" id="2_bjm82"]
+[ext_resource type="Texture2D" uid="uid://ctqxtudcwuf6r" path="res://asset/room asset/bedroom/outside manor.png" id="2_bjm82"]
 [ext_resource type="PackedScene" uid="uid://dl3y83u7uvp5i" path="res://scene/dialog_test.tscn" id="3_qgadd"]
 
 [node name="Main game" type="Node2D"]
