@@ -1,28 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cr3pjohtu85ml"]
+[gd_scene load_steps=4 format=3 uid="uid://cr3pjohtu85ml"]
 
 [ext_resource type="Script" path="res://script/side game/level_1.gd" id="1_rrqt4"]
 [ext_resource type="PackedScene" uid="uid://bjeitkicb5h6o" path="res://scene/side game/player.tscn" id="2_fsooj"]
-[ext_resource type="Texture2D" uid="uid://djm0473pab3a3" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/layers/background.png" id="3_i1xr2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mywmc"]
-size = Vector2(1341, 132.5)
+[ext_resource type="PackedScene" uid="uid://cswflms0vt15k" path="res://scene/side game/tile_map.tscn" id="4_3jlah"]
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_rrqt4")
 
 [node name="Player" parent="." instance=ExtResource("2_fsooj")]
-position = Vector2(574, 328)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(587, 327)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-7.99994, 255.5)
-scale = Vector2(3.48958, 0.482639)
-texture = ExtResource("3_i1xr2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-8.5, 255.25)
-shape = SubResource("RectangleShape2D_mywmc")
+position = Vector2(572, 322)
 
 [node name="deathzone" type="Area2D" parent="."]
+
+[node name="TileMap" parent="." instance=ExtResource("4_3jlah")]
+position = Vector2(24, 32)
