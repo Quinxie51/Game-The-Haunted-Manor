@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhmv7vm5nduid"
-path="res://.godot/imported/title-screen.png-cf90ee8924b642ef08d80b59d8dd7419.ctex"
+path="res://.godot/imported/title-screen.png-1ff07432a76252eb583b4c8455a174eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/side game asset/GothicVania-town-files/PNG/title-screen/title-screen.png"
-dest_files=["res://.godot/imported/title-screen.png-cf90ee8924b642ef08d80b59d8dd7419.ctex"]
+source_file="res://asset/side game asset/GothicVania-town-files/Music/title-screen.png"
+dest_files=["res://.godot/imported/title-screen.png-1ff07432a76252eb583b4c8455a174eb.ctex"]
 
 [params]
 

@@ -11,6 +11,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Press-enter-text" type="Sprite2D" parent="."]
-position = Vector2(530, 280)
+position = Vector2(577, 306)
 scale = Vector2(3.64771, 3.70657)
 texture = ExtResource("1_d7hg6")
