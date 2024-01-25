@@ -32,6 +32,9 @@ shader_parameter/vignette_opacity = 0.5
 
 [node name="tv effect" type="ColorRect" parent="ParallaxLayer"]
 material = SubResource("ShaderMaterial_x0mfw")
-offset_right = 1344.0
-offset_bottom = 700.0
+offset_left = -138.0
+offset_top = -76.0
+offset_right = 1014.0
+offset_bottom = 541.0
+scale = Vector2(1.2861, 1.2861)
 color = Color(1, 1, 1, 0)
