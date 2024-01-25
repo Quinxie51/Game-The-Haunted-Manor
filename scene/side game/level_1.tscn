@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xlotspicjcg7" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/crate-stack.png" id="5_ttjoc"]
 [ext_resource type="Texture2D" uid="uid://bx4i3g23xtg03" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/street-lamp.png" id="6_bev5m"]
 [ext_resource type="PackedScene" uid="uid://cv1obb75dpvmf" path="res://scene/side game/sky.tscn" id="7_2houi"]
-[ext_resource type="PackedScene" uid="uid://cqugqxr5443rp" path="res://scene/side game/beared_man.tscn" id="8_0da2r"]
+[ext_resource type="PackedScene" uid="uid://cqugqxr5443rp" path="res://scene/side game/wolf.tscn" id="8_0da2r"]
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_rrqt4")

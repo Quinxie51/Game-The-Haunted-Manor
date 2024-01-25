@@ -9,10 +9,12 @@ func _physics_process(delta):
 		velocity.y += gravity*delta
 		if velocity.y > 500:
 			velocity.y = 500
+	move_and_slide()
+	update_animation(direction)
 	
 	
 func update_animation(direction):
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite.play("idle")
+			animated_sprite.play("run")
 		

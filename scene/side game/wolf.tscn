@@ -1,42 +1,42 @@
 [gd_scene load_steps=14 format=3 uid="uid://cqugqxr5443rp"]
 
-[ext_resource type="Script" path="res://script/side game/beared_man.gd" id="1_r86cr"]
-[ext_resource type="Texture2D" uid="uid://bovpiriq42e1f" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/bearded-walk/Run.png" id="2_8rvpr"]
+[ext_resource type="Script" path="res://script/side game/beared_man.gd" id="1_est6t"]
+[ext_resource type="Texture2D" uid="uid://bovpiriq42e1f" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/bearded-walk/Run.png" id="2_8gbdv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ny27y"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ap6mt"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wrtm"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ae6b"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h0osh"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhydu"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hk30p"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_udki7"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bdvwr"]
-atlas = ExtResource("2_8rvpr")
+atlas = ExtResource("2_8gbdv")
 region = Rect2(1024, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l0w0s"]
@@ -70,26 +70,24 @@ animations = [{
 "texture": SubResource("AtlasTexture_bdvwr")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"run",
 "speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmyb4"]
-size = Vector2(28.632, 63.6851)
+size = Vector2(150.318, 79.4537)
 
 [node name="wolf" type="CharacterBody2D"]
 scale = Vector2(1.39704, 1.39704)
-script = ExtResource("1_r86cr")
+script = ExtResource("1_est6t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(151, 102)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_l0w0s")
-animation = &"idle"
-frame_progress = 0.463015
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(151.75, 102.36)
-scale = Vector2(1, 1)
+position = Vector2(142.444, 146.381)
 shape = SubResource("RectangleShape2D_jmyb4")
