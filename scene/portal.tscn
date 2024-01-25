@@ -1,18 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnlwrmaxvqxdl"]
+[gd_scene load_steps=4 format=3 uid="uid://dnlwrmaxvqxdl"]
 
 [ext_resource type="Script" path="res://script/portal.gd" id="1_gs2y4"]
 [ext_resource type="AudioStream" uid="uid://bhtclc4dudpkw" path="res://asset/music/Sound Effects - Footsteps-[AudioTrimmer.com]-[AudioTrimmer.com].mp3" id="2_swufh"]
-[ext_resource type="AudioStream" uid="uid://cfnqvcm21cjy3" path="res://asset/music/3 steps.mp3" id="3_4tiry"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aoby3"]
 size = Vector2(10.8495, 21.6505)
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ca1dd"]
-streams_count = 2
-stream_0/stream = ExtResource("2_swufh")
-stream_0/weight = 1.0
-stream_1/stream = ExtResource("3_4tiry")
-stream_1/weight = 1.0
 
 [node name="PortalArea" type="Area2D"]
 script = ExtResource("1_gs2y4")
@@ -23,7 +15,7 @@ scale = Vector2(8.24, 8.24)
 shape = SubResource("RectangleShape2D_aoby3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = SubResource("AudioStreamRandomizer_ca1dd")
+stream = ExtResource("2_swufh")
 autoplay = true
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
