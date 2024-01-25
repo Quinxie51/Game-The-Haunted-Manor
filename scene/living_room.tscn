@@ -75,3 +75,5 @@ offset_bottom = 1659.08
 rotation = -0.321331
 scale = Vector2(0.0318169, 0.0311771)
 texture = ExtResource("8_phl1q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

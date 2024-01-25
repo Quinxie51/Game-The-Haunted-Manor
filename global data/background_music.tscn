@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://djgmrs2y841o"]
+[gd_scene load_steps=2 format=3 uid="uid://djgmrs2y841o"]
 
-[node name="Global data" type="Node"]
+[ext_resource type="Script" path="res://global data/background_music.gd" id="1_dj1k0"]
+
+[node name="Audio Player" type="Node"]
+script = ExtResource("1_dj1k0")
 
 [node name="background music" type="AudioStreamPlayer2D" parent="."]
 autoplay = true
+
+[node name="sound effect" type="AudioStreamPlayer2D" parent="."]

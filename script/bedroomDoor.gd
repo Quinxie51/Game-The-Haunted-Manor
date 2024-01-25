@@ -8,6 +8,7 @@ func _on_input_event(viewport, event, shape_idx):
 		var keyPad = ui_layer.get_keyPad()
 		if !keyPad.is_password_found():
 			
+		
 			ui_layer.show_keyPad(true)
 		elif keyPad.is_password_found():
 			var targetScenePath = "res://scene/"+targetScene+".tscn"

@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=3 uid="uid://cr3pjohtu85ml"]
+[gd_scene load_steps=19 format=3 uid="uid://cr3pjohtu85ml"]
 
-[ext_resource type="Script" path="res://script/side game/level_1.gd" id="1_rrqt4"]
 [ext_resource type="PackedScene" uid="uid://bjeitkicb5h6o" path="res://scene/side game/player.tscn" id="2_fsooj"]
 [ext_resource type="PackedScene" uid="uid://cswflms0vt15k" path="res://scene/side game/tile_map.tscn" id="4_3jlah"]
 [ext_resource type="Texture2D" uid="uid://c4ldy7ryhk36p" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/house-b.png" id="4_m41oe"]
@@ -16,9 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://bqy0wtucow726" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/well.png" id="14_esl3a"]
 [ext_resource type="Texture2D" uid="uid://cd2m6dy5pn4f" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/sign.png" id="15_ay5wq"]
 [ext_resource type="PackedScene" uid="uid://tljvv67iet38" path="res://scene/side game/ui_side.tscn" id="16_3b770"]
-[ext_resource type="Shader" path="res://scene/side game/ui_side.gdshader" id="17_0kbms"]
+[ext_resource type="PackedScene" uid="uid://cib3djkjds2cm" path="res://scene/side game/shader.tscn" id="17_26ep4"]
 
-[sub_resource type="Shader" id="Shader_ld4q1"]
+[sub_resource type="Shader" id="Shader_kpff3"]
 code = "shader_type canvas_item;
 
 //*** IMPORTANT! ***/ 
@@ -243,32 +242,8 @@ void fragment()
 
 "
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xol1k"]
-shader = SubResource("Shader_ld4q1")
-shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 0.4
-shader_parameter/scanlines_width = 0.25
-shader_parameter/grille_opacity = 0.3
-shader_parameter/resolution = Vector2(640, 480)
-shader_parameter/pixelate = true
-shader_parameter/roll = true
-shader_parameter/roll_speed = 8.0
-shader_parameter/roll_size = 15.0
-shader_parameter/roll_variation = 1.8
-shader_parameter/distort_intensity = 0.05
-shader_parameter/noise_opacity = 0.4
-shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.03
-shader_parameter/brightness = 1.4
-shader_parameter/discolor = true
-shader_parameter/warp_amount = 1.0
-shader_parameter/clip_warp = false
-shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2dmbf"]
-shader = ExtResource("17_0kbms")
+shader = SubResource("Shader_kpff3")
 shader_parameter/overlay = false
 shader_parameter/scanlines_opacity = 0.4
 shader_parameter/scanlines_width = 0.25
@@ -292,8 +267,6 @@ shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
 [node name="level 1" type="Node2D"]
-material = SubResource("ShaderMaterial_xol1k")
-script = ExtResource("1_rrqt4")
 
 [node name="sky" parent="." instance=ExtResource("7_2houi")]
 
@@ -365,5 +338,8 @@ offset_left = 216.0
 offset_top = 42.0
 offset_right = 216.0
 offset_bottom = 42.0
+
+[node name="shader" parent="ui_side" instance=ExtResource("17_26ep4")]
+layer = 5
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
