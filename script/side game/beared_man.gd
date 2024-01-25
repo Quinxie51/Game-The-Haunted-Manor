@@ -12,7 +12,6 @@ func _physics_process(delta):
 	move_and_slide()
 	update_animation(direction)
 	
-	
 func update_animation(direction):
 	if is_on_floor():
 		if direction == 0:

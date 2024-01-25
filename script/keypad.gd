@@ -63,14 +63,18 @@ func _on_ok_pressed():
 	if label.text == passWords:
 		status.add_theme_color_override("font_color", Color(0, 1, 0))
 		status.text = "Correct"
+		AudioPlayer.play_sound("correct")
 		await get_tree().create_timer(1.5).timeout
 		password_found = true 
 		hide()
 		var targetScenePath = "res://scene/"+targetScene+".tscn"
 		get_tree().change_scene_to_file(targetScenePath)
 	else:
+		AudioPlayer.play_sound("wrong")
 		status.add_theme_color_override("font_color", Color(1, 0, 0))
 		status.text = "Try again"
+	
+		
 		
 func is_password_found():
 	return password_found

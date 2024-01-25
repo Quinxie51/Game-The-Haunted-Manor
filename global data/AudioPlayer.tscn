@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://global data/background_music.gd" id="1_dj1k0"]
 [ext_resource type="AudioStream" uid="uid://cqfdyox686jcs" path="res://asset/music/EWQL Royalty Free Creepy Music Come Out And Play [TubeRipper.com].mp3" id="2_t5o3s"]
 
-[node name="Audio Player" type="Node"]
+[node name="AudioPlayer" type="Node"]
 script = ExtResource("1_dj1k0")
 
 [node name="background music" type="AudioStreamPlayer2D" parent="."]
