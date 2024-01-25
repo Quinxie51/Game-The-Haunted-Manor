@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cr3pjohtu85ml"]
+[gd_scene load_steps=17 format=3 uid="uid://cr3pjohtu85ml"]
 
 [ext_resource type="Script" path="res://script/side game/level_1.gd" id="1_rrqt4"]
 [ext_resource type="PackedScene" uid="uid://bjeitkicb5h6o" path="res://scene/side game/player.tscn" id="2_fsooj"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dmior2ygo6mrg" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/wagon.png" id="13_b80ge"]
 [ext_resource type="Texture2D" uid="uid://bqy0wtucow726" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/well.png" id="14_esl3a"]
 [ext_resource type="Texture2D" uid="uid://cd2m6dy5pn4f" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/sign.png" id="15_ay5wq"]
+[ext_resource type="PackedScene" uid="uid://tljvv67iet38" path="res://scene/side game/ui_side.tscn" id="16_3b770"]
 
 [node name="level 1" type="Node2D"]
 script = ExtResource("1_rrqt4")
@@ -82,3 +83,9 @@ position = Vector2(766, 548)
 [node name="beared man" parent="Player" instance=ExtResource("8_0da2r")]
 position = Vector2(-622.347, -216.535)
 scale = Vector2(1.84506, 1.72307)
+
+[node name="ui_side" parent="." instance=ExtResource("16_3b770")]
+offset_left = 216.0
+offset_top = 42.0
+offset_right = 216.0
+offset_bottom = 42.0

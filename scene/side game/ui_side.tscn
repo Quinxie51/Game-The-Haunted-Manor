@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://tljvv67iet38"]
+
+[ext_resource type="Texture2D" uid="uid://cfwli5o72di5g" path="res://asset/side game asset/GothicVania-town-files/PNG/title-screen/press-enter-text.png" id="1_d7hg6"]
+
+[node name="ui_side" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Press-enter-text" type="Sprite2D" parent="."]
+position = Vector2(530, 280)
+scale = Vector2(3.64771, 3.70657)
+texture = ExtResource("1_d7hg6")
