@@ -3,29 +3,34 @@
 [ext_resource type="Texture2D" uid="uid://djm0473pab3a3" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/layers/background.png" id="1_c2hlw"]
 [ext_resource type="Texture2D" uid="uid://dgu44j5pihjcx" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/layers/middleground.png" id="2_p3v3x"]
 
-[node name="Background" type="ParallaxBackground"]
+[node name="Node2D" type="Node2D"]
 
-[node name="sky" type="ParallaxLayer" parent="."]
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="ParallaxLayer" parent="Background"]
 texture_filter = 1
 texture_repeat = 3
 position = Vector2(-601, -439)
 scale = Vector2(1.00687, 1.00128)
 motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(1000, 0)
+motion_mirroring = Vector2(850, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="sky"]
-texture_filter = 1
+[node name="Sprite2D" type="Sprite2D" parent="Background/sky"]
 texture_repeat = 3
-position = Vector2(591.931, 441.434)
-scale = Vector2(2.68511, 2.5293)
+position = Vector2(1043.44, 760.435)
+scale = Vector2(2.30672, 2.30672)
 texture = ExtResource("1_c2hlw")
-centered = false
 
-[node name="village" type="ParallaxLayer" parent="."]
+[node name="village" type="ParallaxLayer" parent="Background"]
 texture_repeat = 3
 motion_mirroring = Vector2(384, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="village"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/village"]
 texture_repeat = 3
-position = Vector2(192, 498)
+position = Vector2(194, 515)
+texture = ExtResource("2_p3v3x")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/village"]
+texture_repeat = 3
+position = Vector2(963, 515)
 texture = ExtResource("2_p3v3x")

@@ -83,15 +83,15 @@ collision_mask = 5
 script = ExtResource("1_nv4sg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(53.75, 69.3333)
+position = Vector2(64.9065, 23.4493)
 scale = Vector2(2.47436, 2.47436)
 sprite_frames = SubResource("SpriteFrames_kikv6")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(54, 77)
+position = Vector2(65.1565, 31.1159)
 shape = SubResource("RectangleShape2D_gv23t")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(59, 115)
+position = Vector2(69.6544, 21.1992)
 limit_bottom = 650
