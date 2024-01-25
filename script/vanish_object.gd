@@ -8,7 +8,7 @@ func _on_portal_area_input_event(viewport, event, shape_idx):
 		var effect = EFFECT.instantiate()
 		add_child(effect)
 		effect.global_position = event.position
-		print("effect at global pos: ", effect.global_position)
-		#vanishObject.queue_free()
+		AudioPlayer.play_sound("dust")
+		vanishObject.queue_free()
 		
 		

@@ -217,7 +217,7 @@ if (discolor)
 }
 
 // Reduce the opacity of the color by modifying the alpha component
-text.a *= 0.3; // Adjust the value (0.5 is just an example)
+text.a *= 0.3;
 
 COLOR = text;
 }

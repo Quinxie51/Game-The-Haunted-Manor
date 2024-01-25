@@ -9,7 +9,6 @@ func _on_input_event(viewport, event, shape_idx):
 		if !keyPad.is_password_found():
 			ui_layer.show_keyPad(true)
 		elif keyPad.is_password_found():
-			AudioPlayer.play_sound("door")
 			var targetScenePath = "res://scene/"+targetScene+".tscn"
 			get_tree().change_scene_to_file(targetScenePath)
 			

@@ -3,6 +3,7 @@ var door = preload("res://asset/music/Door open sound effect.mp3")
 var wolf = preload("res://asset/music/wolf sound effect.mp3")
 var correct = preload("res://asset/music/correct.mp3")
 var wrong = preload("res://asset/wrong pass.mp3")
+var dust = preload("res://asset/music/Fairy dust, magic sound effect.mp3")
 
 func play_sound(sound: String):
 	var stream = null
@@ -14,6 +15,8 @@ func play_sound(sound: String):
 		stream = correct
 	elif sound == "wrong":
 		stream = wrong
+	elif sound == "dust":
+		stream = dust
 	else:
 		print("Invalid")
 		return 
