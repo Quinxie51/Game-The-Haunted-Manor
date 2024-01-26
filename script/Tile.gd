@@ -12,17 +12,17 @@ func set_text(new_number):
 	$Number/Label.text = str(number)
 
 # Update the background image of the tile
-func set_sprite(new_frame, size, tile_size):
+func set_sprite(new_frame, total_size, tile_size):
 	var sprite = $Sprite
 
-	update_size(size, tile_size)
+	update_size(total_size, tile_size)
 
-	sprite.set_hframes(size)
-	sprite.set_vframes(size)
+	sprite.set_hframes(3)
+	sprite.set_vframes(3)
 	sprite.set_frame(new_frame)
 
 # scale to the new tile_size
-func update_size(size, tile_size):
+func update_size(total_size, tile_size):
 	var new_size = Vector2(tile_size, tile_size)
 	set_size(new_size)
 	$Number.set_size(new_size)
@@ -30,7 +30,7 @@ func update_size(size, tile_size):
 	$Number/Label.set_size(new_size)
 	$Panel.set_size(new_size)
 
-	var to_scale = size * (new_size / $Sprite.texture.get_size())
+	var to_scale = 3 * (new_size / $Sprite.texture.get_size())
 	$Sprite.set_scale(to_scale)
 
 # Update the entire background image

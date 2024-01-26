@@ -13,53 +13,41 @@ border_color = Color(0.184314, 0.145098, 0.160784, 1)
 border_blend = true
 
 [node name="Tile" type="TextureButton"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_ysaoa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(80, 104)
+[node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.344, 0.344)
 texture = ExtResource("2_2ghkn")
+centered = false
 hframes = 4
 vframes = 4
-frame = 15
 
-[node name="Number 1" type="Control" parent="."]
+[node name="Number" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="Number 1"]
+[node name="Label" type="Label" parent="Number"]
 layout_mode = 1
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 56.0
-offset_bottom = 58.0
+offset_right = 40.0
+offset_bottom = 42.0
 theme_override_font_sizes/font_size = 30
 text = "1
 "
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Number"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.134574, 0.320395)
+mouse_filter = 2
 color = Color(0, 0, 0, 0.321569)
 
-[node name="Border" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 160.0
-offset_bottom = 208.0
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 149.0
+offset_bottom = 206.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_egao2")
 
 [connection signal="pressed" from="." to="." method="_on_Tile_pressed"]
