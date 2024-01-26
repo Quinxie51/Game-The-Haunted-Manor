@@ -5,15 +5,15 @@ var direction = 0
 var active = true
 
 func _physics_process(delta):
-	if is_on_floor() == false:
-		velocity.y += gravity*delta
-		if velocity.y > 500:
-			velocity.y = 500
-	move_and_slide()
-	update_animation(direction)
-	
+   if is_on_floor() == false:
+      velocity.y += gravity*delta
+      if velocity.y > 500:
+         velocity.y = 500
+   move_and_slide()
+   update_animation(direction)
+   
 func update_animation(direction):
-	if is_on_floor():
-		if direction == 0:
-			animated_sprite.play("run")
-		
+   if is_on_floor():
+      if direction == 0:
+         animated_sprite.play("run")
+      

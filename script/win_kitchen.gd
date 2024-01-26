@@ -3,9 +3,9 @@ extends Control
 
 
 func _on_claim_pressed():
-	hide()
-	flashlight.show_flashlight(true)
-	
-	
-	
-	
+   hide()
+   flashlight.show_flashlight(true)
+   
+   
+   
+   
