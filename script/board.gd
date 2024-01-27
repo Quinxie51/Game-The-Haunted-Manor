@@ -93,13 +93,11 @@ func _ready():
    tile_size = floor(get_size().x / total_size)
    set_size(Vector2(tile_size*total_size, tile_size*total_size))
    gen_board()
-   print("ready board", board)
 
 func _on_Tile_pressed(number):
-   print("tile pressed board", board)
    if is_animating:
       return
-   print("tilie pressed not animating")
+
    # check if game is not started
    if game_state == GAME_STATES.NOT_STARTED:
       scramble_board()
@@ -116,7 +114,7 @@ func _on_Tile_pressed(number):
 
    var tile = value_to_grid(number)
    empty = value_to_grid(0)
-   print("tile pressed tile", tile)
+
 
    # if not clicked in row or column of the empty tile then return
    if (tile.x != empty.x and tile.y != empty.y):
@@ -139,8 +137,6 @@ func _on_Tile_pressed(number):
 
    # store current board state to calculat the moves made
    var old_board = board.duplicate(true)
-   print("tile pressed old_board", old_board)
-   print("board after duplicating", board)
 
    # clicked in same row as as empty
    if tile.y == empty.y:
@@ -149,7 +145,6 @@ func _on_Tile_pressed(number):
       else:
          board[tile.y] = slide_row(board[tile.y], -1, end.x)
 
-   print("board after slide row", board)
    # clicked in same column as empty
    if tile.x == empty.x:
       var col = []
@@ -163,13 +158,10 @@ func _on_Tile_pressed(number):
       for r in range(total_size):
          board[r][tile.x] = col[r]
 
-   print("board after slide column", board)
 
    # update moves
    var moves_made = 0
 
-   print("board", board)
-   print("old_board", old_board)
    for r in range(total_size):
       for c in range(total_size):
          if old_board[r][c] != board[r][c]:
@@ -273,7 +265,6 @@ func _process(_delta):
       if (nr == -1 or nc == -1 or nr >= size or nc >= size):
          return
       var tile_pressed = board[nr][nc]
-      print(tile_pressed)
       _on_Tile_pressed(tile_pressed)
 
 func slide_row(row, dir, limiter):
@@ -327,7 +318,6 @@ func set_tile_numbers(state):
 
 func update_size(new_size):
    total_size = int(new_size)
-   print('updating board size ', total_size)
 
    tile_size = floor(get_size().x / total_size)
    for tile in tiles:

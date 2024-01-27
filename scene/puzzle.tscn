@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpiek3beljyi6"]
+
+[ext_resource type="Texture2D" uid="uid://dvxuusyc8gjve" path="res://asset/room asset/living room/paper 3.png" id="1_lt4vn"]
+[ext_resource type="PackedScene" uid="uid://btucf38avqyfy" path="res://scene/board.tscn" id="2_ped13"]
+[ext_resource type="Theme" uid="uid://bbnkkqv86ismc" path="res://asset/font/new_theme.tres" id="3_bsdjs"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="4_tybpe"]
+[ext_resource type="Texture2D" uid="uid://dyexeesrlcgra" path="res://asset/font/GUI.png" id="5_2qdp4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ubeer"]
+texture = ExtResource("5_2qdp4")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+region_rect = Rect2(0, 96, 48, 32)
+
+[node name="puzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.00001
+offset_top = 5.0
+offset_right = 765.0
+offset_bottom = 437.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.569111, 0.574147)
+texture = ExtResource("1_lt4vn")
+
+[node name="Board" parent="TextureRect" instance=ExtResource("2_ped13")]
+layout_mode = 1
+offset_left = 897.892
+offset_top = 184.622
+offset_right = 291.892
+offset_bottom = 186.622
+scale = Vector2(0.492292, 0.605348)
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 435.767
+offset_top = 714.103
+offset_right = 533.767
+offset_bottom = 761.103
+scale = Vector2(1.00294, 1)
+theme = ExtResource("3_bsdjs")
+theme_override_fonts/font = ExtResource("4_tybpe")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_ubeer")
+text = "Reset"
+icon_alignment = 1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxgiixpjpctr1"]
+[gd_scene load_steps=5 format=3 uid="uid://bxgiixpjpctr1"]
 
 [ext_resource type="Script" path="res://script/Tile.gd" id="1_ysaoa"]
 [ext_resource type="Texture2D" uid="uid://q21d34r8rxsg" path="res://asset/room asset/bedroom/family portrait.jpg" id="2_2ghkn"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="3_pwl6w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_egao2"]
 draw_center = false
@@ -29,9 +30,12 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="Number"]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 30
+offset_left = 18.0
+offset_top = 19.0
+offset_right = 58.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_pwl6w")
+theme_override_font_sizes/font_size = 50
 text = "1
 "
 
@@ -43,9 +47,8 @@ color = Color(0, 0, 0, 0.321569)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-offset_left = -4.0
 offset_top = 2.0
-offset_right = 149.0
+offset_right = 153.0
 offset_bottom = 206.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_egao2")
