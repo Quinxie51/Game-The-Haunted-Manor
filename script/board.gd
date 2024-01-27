@@ -93,11 +93,13 @@ func _ready():
    tile_size = floor(get_size().x / total_size)
    set_size(Vector2(tile_size*total_size, tile_size*total_size))
    gen_board()
+   print("ready board", board)
 
 func _on_Tile_pressed(number):
+   print("tile pressed board", board)
    if is_animating:
       return
-
+   print("tilie pressed not animating")
    # check if game is not started
    if game_state == GAME_STATES.NOT_STARTED:
       scramble_board()
@@ -112,9 +114,9 @@ func _on_Tile_pressed(number):
       emit_signal('game_started')
       return
 
-
    var tile = value_to_grid(number)
    empty = value_to_grid(0)
+   print("tile pressed tile", tile)
 
    # if not clicked in row or column of the empty tile then return
    if (tile.x != empty.x and tile.y != empty.y):
@@ -132,11 +134,13 @@ func _on_Tile_pressed(number):
             continue
          var object: TextureButton = get_tile_by_value(board[r][c])
          object.slide_to((Vector2(c, r)-dir) * tile_size, slide_duration)
-         is_animating = true
+         #is_animating = true
          tiles_animating += 1
 
    # store current board state to calculat the moves made
    var old_board = board.duplicate(true)
+   print("tile pressed old_board", old_board)
+   print("board after duplicating", board)
 
    # clicked in same row as as empty
    if tile.y == empty.y:
@@ -145,6 +149,7 @@ func _on_Tile_pressed(number):
       else:
          board[tile.y] = slide_row(board[tile.y], -1, end.x)
 
+   print("board after slide row", board)
    # clicked in same column as empty
    if tile.x == empty.x:
       var col = []
@@ -155,17 +160,21 @@ func _on_Tile_pressed(number):
          col = slide_column(col, 1, start.y)
       else:
          col = slide_column(col, -1, end.y)
-
       for r in range(total_size):
          board[r][tile.x] = col[r]
 
+   print("board after slide column", board)
+
    # update moves
    var moves_made = 0
+
+   print("board", board)
+   print("old_board", old_board)
    for r in range(total_size):
       for c in range(total_size):
          if old_board[r][c] != board[r][c]:
             moves_made += 1
-
+         
    move_count += moves_made - 1
    emit_signal("moves_updated", move_count)
 
@@ -272,20 +281,16 @@ func slide_row(row, dir, limiter):
    if dir == 1:
       # slide towards the right
       var start = row.slice(0, limiter)
-      start.pop_back()
       var pre = row.slice(limiter, empty_index)
-      pre.pop_back()
       var post = row.slice(empty_index, row.size())
       post.pop_front()
       return start + [0] + pre + post
    else:
       # slide towards the left
       var pre = row.slice(0, empty_index)
-      pre.pop_back()
-      var post = row.slice(empty_index, limiter)
+      var post = row.slice(empty_index, limiter+1)
       post.pop_front()
-      var end = row.slice(limiter, row.size() - 1)
-      end.pop_front()
+      var end = row.slice(limiter+1, row.size())
       return pre + post + [0] + end
 
 func slide_column(col, dir, limiter):
@@ -294,22 +299,16 @@ func slide_column(col, dir, limiter):
    if dir == 1:
       # slide down
       var start = col.slice(0, limiter)
-      start.pop_back()
       var pre = col.slice(limiter, empty_index)
-      pre.pop_back()
-      var post = col.slice(empty_index, col.size() - 1)
-      post.pop_front()
+      var post = col.slice(empty_index+1, col.size())
 
       return start + [0] + pre + post
    else:
       # slide up
       # slide towards the left
       var pre = col.slice(0, empty_index)
-      pre.pop_back()
-      var post = col.slice(empty_index, limiter)
-      post.pop_front()
-      var end = col.slice(limiter, col.size() - 1)
-      end.pop_front()
+      var post = col.slice(empty_index+1, limiter+1)
+      var end = col.slice(limiter+1, col.size())
       return pre + post + [0] + end
 
 func _on_Tile_slide_completed(_number):
@@ -328,7 +327,7 @@ func set_tile_numbers(state):
 
 func update_size(new_size):
    total_size = int(new_size)
-   print('updating board size ', size)
+   print('updating board size ', total_size)
 
    tile_size = floor(get_size().x / total_size)
    for tile in tiles:

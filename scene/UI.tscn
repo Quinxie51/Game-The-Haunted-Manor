@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cc2bgu7xeeiwt" path="res://scene/keypad.tscn" id="5_mv4no"]
 
 [node name="UILayer" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_5imsx")
 
 [node name="Inventory" type="GridContainer" parent="."]
+visible = false
 offset_left = 1018.0
 offset_top = -3.0
 offset_right = 1148.0

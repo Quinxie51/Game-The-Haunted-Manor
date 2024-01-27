@@ -1,13 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://djgmrs2y841o"]
+[gd_scene load_steps=2 format=3 uid="uid://djgmrs2y841o"]
 
 [ext_resource type="Script" path="res://global data/background_music.gd" id="1_dj1k0"]
-[ext_resource type="AudioStream" uid="uid://cqfdyox686jcs" path="res://asset/music/EWQL Royalty Free Creepy Music Come Out And Play [TubeRipper.com].mp3" id="2_t5o3s"]
 
 [node name="AudioPlayer" type="Node"]
 script = ExtResource("1_dj1k0")
 
 [node name="background music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_t5o3s")
 volume_db = -9.152
 autoplay = true
 

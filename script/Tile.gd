@@ -40,8 +40,11 @@ func set_sprite_texture(texture):
 # Slide the tile to a new position
 func slide_to(new_position, duration):
    var tween = get_tree().create_tween() 
-   tween.animate_property(self, "rect_position", self.rect_position, new_position, duration, Tween.TRANS_QUART, Tween.EASE_OUT)
-   tween.start()
+   tween.tween_property(self,"position",new_position,duration)
+   tween.set_trans(Tween.TRANS_QUAD)
+   tween.set_ease(Tween.EASE_OUT)
+   #tween.interpolate_property(self, "rect_position", self.position, new_position, duration, Tween.TRANS_QUART, Tween.EASE_OUT)
+   tween.play()
    tween.connect("tween_completed",_on_Tween_tween_completed)
 
 func set_number_visible(state):
