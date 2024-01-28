@@ -9,13 +9,13 @@ func _process(delta):
    var current_scene = get_tree().get_current_scene()
    if current_scene != null:
       var current_scene_name = get_tree().get_current_scene().name
-      var scene_to_exclude_name = "Main game"
-      if current_scene_name != scene_to_exclude_name:
+      var exclude_scenes = ["Main game", "level 1"]
+      if current_scene_name not in exclude_scenes:
          self.visible = true  
       else:
          self.visible = false 
    else:
-      self.visible = false 
+        self.visible = false
       
 func show_win_screen(found:bool):
    $Win_kitchen.visible = found

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://5hmmcahy3wp6"]
+
+[ext_resource type="Texture2D" uid="uid://dvmwnpl5k0soy" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/house-a.png" id="1_g3if8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtr0c"]
+size = Vector2(81.1779, 128)
+
+[node name="Finish House" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_g3if8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.1479, 24)
+scale = Vector2(0.964496, 1)
+shape = SubResource("RectangleShape2D_jtr0c")

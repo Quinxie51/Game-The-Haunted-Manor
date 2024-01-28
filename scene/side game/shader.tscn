@@ -15,7 +15,7 @@ shader_parameter/roll_speed = 8.0
 shader_parameter/roll_size = 12.753
 shader_parameter/roll_variation = 1.635
 shader_parameter/distort_intensity = 0.04
-shader_parameter/noise_opacity = 0.479
+shader_parameter/noise_opacity = 0.4
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
 shader_parameter/aberration = 0.03
@@ -24,7 +24,7 @@ shader_parameter/discolor = true
 shader_parameter/warp_amount = 1.0
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/vignette_opacity = 0.5
+shader_parameter/vignette_opacity = 0.78
 
 [node name="shader" type="ParallaxBackground"]
 
@@ -33,8 +33,8 @@ shader_parameter/vignette_opacity = 0.5
 [node name="tv effect" type="ColorRect" parent="ParallaxLayer"]
 material = SubResource("ShaderMaterial_x0mfw")
 offset_left = -6.0
-offset_top = -63.0
+offset_top = -71.0
 offset_right = 1146.0
-offset_bottom = 554.0
-scale = Vector2(1.02084, 1.17087)
+offset_bottom = 546.0
+scale = Vector2(1.02084, 1.17189)
 color = Color(1, 1, 1, 0)
