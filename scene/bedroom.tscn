@@ -17,12 +17,13 @@ scale = Vector2(0.657538, 0.657538)
 texture = ExtResource("2_s7vkk")
 
 [node name="exit bedroom" parent="." instance=ExtResource("2_6tnu1")]
-position = Vector2(97.1981, 615.11)
+position = Vector2(180.809, 625.661)
 rotation = 1.57382
 scale = Vector2(0.68001, 0.68001)
 targetScene = "living_room"
 
 [node name="Sprite2D" type="Sprite2D" parent="exit bedroom"]
+position = Vector2(-3.09856, 1.54632)
 rotation = 1.58696
 scale = Vector2(0.249954, 0.249954)
 texture = ExtResource("3_wixqj")

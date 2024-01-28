@@ -1,6 +1,36 @@
-[gd_scene load_steps=2 format=3 uid="uid://tljvv67iet38"]
+[gd_scene load_steps=8 format=3 uid="uid://tljvv67iet38"]
 
-[ext_resource type="Texture2D" uid="uid://cfwli5o72di5g" path="res://asset/side game asset/GothicVania-town-files/PNG/title-screen/press-enter-text.png" id="1_d7hg6"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="1_7ea08"]
+[ext_resource type="Script" path="res://script/side game/ui_side.gd" id="1_olfmr"]
+[ext_resource type="Texture2D" uid="uid://dyexeesrlcgra" path="res://asset/font/GUI.png" id="2_hap4d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjnob"]
+bg_color = Color(0.168627, 0.192157, 0.270588, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxyp3"]
+texture = ExtResource("2_hap4d")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0guw"]
+texture = ExtResource("2_hap4d")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdaee"]
+texture = ExtResource("2_hap4d")
+expand_margin_left = 20.0
+expand_margin_top = 5.0
+expand_margin_right = 20.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(113, 81, 30, 14)
 
 [node name="ui_side" type="Control"]
 layout_mode = 3
@@ -9,8 +39,47 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_olfmr")
 
-[node name="Press-enter-text" type="Sprite2D" parent="."]
-position = Vector2(577, 306)
-scale = Vector2(3.64771, 3.70657)
-texture = ExtResource("1_d7hg6")
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 285.0
+offset_top = 170.0
+offset_right = 918.0
+offset_bottom = 239.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_7ea08")
+theme_override_font_sizes/font_size = 30
+text = "Who is the guardian of the shadows, 
+feared by generations and bound by an ancient pact?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 477.0
+offset_top = 279.0
+offset_right = 685.0
+offset_bottom = 356.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_7ea08")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rjnob")
+alignment = 1
+clear_button_enabled = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 540.0
+offset_top = 404.0
+offset_right = 619.0
+offset_bottom = 481.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_7ea08")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_hxyp3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j0guw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mdaee")
+text = "OK"
