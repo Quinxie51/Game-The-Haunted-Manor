@@ -177,29 +177,24 @@ func _on_Tile_pressed(number):
       emit_signal("game_won")
 
 func is_board_solvable(flat):
-   var parity = 0
-   var grid_width = 80
-   var row = 0
-   var blank_row = 0
-   for i in range(total_size*total_size):
-      if i % grid_width == 0:
-         row += 1
+    var parity = 0
+    var blank_row = 0
 
-      if flat[i] == 0:
-         blank_row = row
-         continue
+    # Count inversions and find the row of the blank square
+    for i in range(total_size * total_size):
+        if flat[i] == 0:
+            blank_row = i / total_size
+            continue
+        for j in range(i + 1, total_size * total_size):
+            if flat[i] > flat[j] and flat[j] != 0:
+                parity += 1
 
-      for j in range(i+1, total_size*total_size):
-         if flat[i] > flat[j] and flat[j] != 0:
-            parity += 1
-
-   if grid_width % 2 == 0:
-      if blank_row % 2 == 0:
-         return parity % 2 == 0
-      else:
-         return parity % 2 != 0
-   else:
-      return parity % 2 == 0
+    if total_size % 2 == 1:
+        # Odd-sized boards
+        return parity % 2 == 0
+    else:
+        # Even-sized boards
+        return (total_size - blank_row) % 2 == parity % 2
 
 func scramble_board():
    reset_board()

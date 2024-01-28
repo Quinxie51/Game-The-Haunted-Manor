@@ -11,7 +11,6 @@
 script = ExtResource("1_5imsx")
 
 [node name="Inventory" type="GridContainer" parent="."]
-visible = false
 offset_left = 1018.0
 offset_top = -3.0
 offset_right = 1148.0
