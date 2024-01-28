@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://72yhymagrmnf"]
+
+[ext_resource type="Texture2D" uid="uid://c1lkbdlc1hfc7" path="res://asset/room asset/library/library 1.png" id="1_2uax5"]
+
+[node name="Library" type="Node2D"]
+
+[node name="library" type="Sprite2D" parent="."]
+position = Vector2(714, 394)
+scale = Vector2(0.779393, 0.779393)
+texture = ExtResource("1_2uax5")
