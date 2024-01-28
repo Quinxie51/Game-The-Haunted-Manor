@@ -40,6 +40,11 @@ position = Vector2(401.498, 321.369)
 scale = Vector2(1.24, 1.28)
 targetScene = "kitchen"
 
+[node name="LibraryDoor" parent="." instance=ExtResource("3_0clsr")]
+position = Vector2(835.46, 296.075)
+scale = Vector2(1.05429, 0.648024)
+targetScene = "puzzle"
+
 [node name="709" type="TextureRect" parent="."]
 offset_left = 976.707
 offset_top = 549.888

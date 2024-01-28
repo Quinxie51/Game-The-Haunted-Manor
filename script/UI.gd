@@ -26,9 +26,16 @@ func show_flashlight(show: bool):
 func show_keyPad(found:bool):
    if $Keypad != null:
       $Keypad.visible = found
+      
+func show_puzzle(solve:bool):
+   if $puzzle != null:
+      $puzzle.visible = solve
             
 func get_keyPad():
    return $Keypad
+   
+func get_puzzle():
+   return $puzzle
 
 func toggle_flashlight():
    get_flashlight.emit()
