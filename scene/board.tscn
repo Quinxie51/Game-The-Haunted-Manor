@@ -18,6 +18,3 @@ scale = Vector2(0.863728, 0.931812)
 size_flags_horizontal = 0
 script = ExtResource("1_3q846")
 tile_scene = ExtResource("2_qgl2q")
-
-[node name="Tile" parent="." instance=ExtResource("2_qgl2q")]
-layout_mode = 0
