@@ -257,7 +257,7 @@ func _process(_delta):
 
       var nr = empty.y + dir.y
       var nc = empty.x + dir.x
-      if (nr == -1 or nc == -1 or nr >= size or nc >= size):
+      if (nr == -1 or nc == -1 or nr >= total_size or nc >= total_size):
          return
       var tile_pressed = board[nr][nc]
       _on_Tile_pressed(tile_pressed)

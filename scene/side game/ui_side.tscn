@@ -43,10 +43,10 @@ script = ExtResource("1_olfmr")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-offset_left = 285.0
-offset_top = 170.0
-offset_right = 918.0
-offset_bottom = 239.0
+offset_left = 266.0
+offset_top = 168.0
+offset_right = 899.0
+offset_bottom = 237.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_7ea08")
 theme_override_font_sizes/font_size = 30
@@ -57,14 +57,14 @@ vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 2
-offset_left = 477.0
-offset_top = 279.0
-offset_right = 685.0
-offset_bottom = 356.0
+offset_left = 350.0
+offset_top = 287.0
+offset_right = 823.0
+offset_bottom = 364.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_fonts/font = ExtResource("1_7ea08")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_rjnob")
 alignment = 1
 clear_button_enabled = true
@@ -83,3 +83,9 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_hxyp3")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j0guw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_mdaee")
 text = "OK"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
