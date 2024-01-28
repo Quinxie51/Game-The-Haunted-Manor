@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://de5we43erlwy5"]
+[gd_scene load_steps=11 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/room asset/living room/living room.png" id="1_jl6h5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d2wyximxx6hlk" path="res://asset/room asset/living room/341-4.png" id="5_2hbsl"]
 [ext_resource type="Script" path="res://script/bedroomDoor.gd" id="5_semv7"]
 [ext_resource type="Texture2D" uid="uid://baevjt47jtw2f" path="res://asset/room asset/living room/341-8.png" id="5_yxxhb"]
+[ext_resource type="Script" path="res://script/libraryDoor.gd" id="6_0242g"]
 [ext_resource type="Texture2D" uid="uid://bpd75gdrtkcar" path="res://asset/room asset/living room/2.png" id="6_kmvo2"]
 [ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/room asset/living room/341-9.png" id="8_phl1q"]
 
@@ -43,7 +44,7 @@ targetScene = "kitchen"
 [node name="LibraryDoor" parent="." instance=ExtResource("3_0clsr")]
 position = Vector2(835.46, 296.075)
 scale = Vector2(1.05429, 0.648024)
-targetScene = "puzzle"
+script = ExtResource("6_0242g")
 
 [node name="709" type="TextureRect" parent="."]
 offset_left = 976.707
