@@ -30,7 +30,13 @@ func show_keyPad(found:bool):
 func show_puzzle(solve:bool):
    if $puzzle != null:
       $puzzle.visible = solve
-            
+      
+func show_bedroom_win(found:bool):
+   $"Win bedroom".visible = found
+   
+func show_puzzle_piece(show: bool):
+   $Inventory/puzzlePiece/puzzle.visible = show
+   
 func get_keyPad():
    return $Keypad
    

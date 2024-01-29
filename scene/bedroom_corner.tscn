@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ir53df7x8gs8"]
+[gd_scene load_steps=5 format=3 uid="uid://ir53df7x8gs8"]
 
 [ext_resource type="Script" path="res://script/bedroom_corner.gd" id="1_ce5ur"]
 [ext_resource type="Texture2D" uid="uid://pxr53fk7dp28" path="res://asset/room asset/bedroom/bedroom corner.png" id="1_v5cfl"]
 [ext_resource type="PackedScene" uid="uid://ddnkdt54k43pj" path="res://scene/vanish_object.tscn" id="2_ol6kg"]
+[ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="4_we8hf"]
 
 [node name="bedroom_corner" type="Node2D"]
 script = ExtResource("1_ce5ur")
@@ -20,7 +21,7 @@ vanishObject = NodePath("../../Objects/laptop")
 [node name="teddy bear" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(97.8397, -314.201)
 scale = Vector2(1, 1.56912)
-vanishObject = NodePath("../../Objects/big teddy bear")
+vanishObject = NodePath("../../Objects/small teddy bear")
 
 [node name="lamp" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-653.684, -321.979)
@@ -198,19 +199,23 @@ text = "brushes
 "
 metadata/_edit_use_anchors_ = true
 
-[node name="big teddy bear" type="Label" parent="Objects"]
+[node name="small teddy bear" type="Label" parent="Objects"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.0556285
 anchor_top = 0.0924345
-anchor_right = 0.00268055
+anchor_right = 0.0201733
 anchor_bottom = 0.0924345
 offset_left = 88.0
 offset_top = 21.0
 offset_right = 140.0
 offset_bottom = 70.0
-scale = Vector2(1.36, 1.36)
-text = "teddy bear
+scale = Vector2(1.33776, 1.37525)
+text = "small teddy bear
 
 "
 metadata/_edit_use_anchors_ = true
+
+[node name="exit" parent="." instance=ExtResource("4_we8hf")]
+position = Vector2(91, 523)
+targetScene = "bedroom"

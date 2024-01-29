@@ -1,4 +1,18 @@
-[gd_scene format=3 uid="uid://ddsyhg0sjw2e7"]
+[gd_scene load_steps=6 format=3 uid="uid://ddsyhg0sjw2e7"]
+
+[ext_resource type="Script" path="res://script/win_bedroom.gd" id="1_up5h1"]
+[ext_resource type="Texture2D" uid="uid://dibyk4kg0smur" path="res://asset/room asset/living room/container.png" id="2_til71"]
+[ext_resource type="Texture2D" uid="uid://6rorjmdnvrul" path="res://asset/room asset/bedroom/puzzle miss.png" id="3_0qvj7"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="4_c6hi5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0jay0"]
+font = ExtResource("4_c6hi5")
+font_size = 30
+outline_size = 5
+outline_color = Color(0.266667, 0.113725, 0, 1)
+shadow_size = 5
+shadow_color = Color(0.368627, 0.137255, 0, 0)
+shadow_offset = Vector2(5, 5)
 
 [node name="Win bedroom" type="Control"]
 layout_mode = 3
@@ -7,3 +21,54 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_up5h1")
+
+[node name="frame" type="TextureRect" parent="."]
+offset_left = 396.0
+offset_top = 71.0
+offset_right = 879.0
+offset_bottom = 750.0
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("2_til71")
+
+[node name="puzzle piece" type="TextureRect" parent="frame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.8529
+offset_top = -96.853
+offset_right = 981.147
+offset_bottom = 983.147
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.191683, 0.248305)
+texture = ExtResource("3_0qvj7")
+
+[node name="congrat" type="Label" parent="frame"]
+layout_mode = 0
+offset_left = 48.5294
+offset_top = 152.941
+offset_right = 441.529
+offset_bottom = 215.941
+text = "Congratulation! 
+You found a missing puzzle piece!
+"
+label_settings = SubResource("LabelSettings_0jay0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="claim" type="Button" parent="frame"]
+self_modulate = Color(1, 0.678431, 0, 1)
+layout_mode = 0
+offset_left = 177.941
+offset_top = 532.353
+offset_right = 229.941
+offset_bottom = 563.353
+scale = Vector2(1.76659, 1.76659)
+text = "Claim"
+icon_alignment = 1
+
+[connection signal="pressed" from="frame/claim" to="." method="_on_claim_pressed"]

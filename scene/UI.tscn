@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://feq2q57r83ne"]
+[gd_scene load_steps=10 format=3 uid="uid://feq2q57r83ne"]
 
 [ext_resource type="Script" path="res://script/UI.gd" id="1_5imsx"]
 [ext_resource type="PackedScene" uid="uid://daqgpwslovm8i" path="res://scene/slot.tscn" id="1_vo8ms"]
 [ext_resource type="PackedScene" uid="uid://bkjx8cnvhb766" path="res://scene/win_kitchen.tscn" id="2_xf6po"]
 [ext_resource type="Texture2D" uid="uid://dlc0hvknkh0td" path="res://asset/room asset/living room/341.png" id="3_rkdnw"]
 [ext_resource type="Script" path="res://script/slot.gd" id="4_16i2j"]
+[ext_resource type="Texture2D" uid="uid://6rorjmdnvrul" path="res://asset/room asset/bedroom/puzzle miss.png" id="5_lcait"]
 [ext_resource type="PackedScene" uid="uid://cc2bgu7xeeiwt" path="res://scene/keypad.tscn" id="5_mv4no"]
 [ext_resource type="PackedScene" uid="uid://cpiek3beljyi6" path="res://scene/puzzle.tscn" id="7_gf4at"]
+[ext_resource type="PackedScene" uid="uid://ddsyhg0sjw2e7" path="res://scene/win_bedroom.tscn" id="9_lwapn"]
 
 [node name="UILayer" type="CanvasLayer"]
 script = ExtResource("1_5imsx")
@@ -30,8 +32,18 @@ offset_bottom = 40.0
 scale = Vector2(0.129631, 0.115509)
 texture = ExtResource("3_rkdnw")
 
-[node name="slot2" parent="Inventory" instance=ExtResource("1_vo8ms")]
+[node name="puzzlePiece" parent="Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
+
+[node name="puzzle" type="TextureRect" parent="Inventory/puzzlePiece"]
+visible = false
+layout_mode = 0
+offset_left = 38.9193
+offset_top = 34.75
+offset_right = 505.919
+offset_bottom = 664.75
+scale = Vector2(0.122656, 0.117268)
+texture = ExtResource("5_lcait")
 
 [node name="slot3" parent="Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
@@ -56,3 +68,6 @@ offset_top = 45.0
 offset_right = 75.0
 offset_bottom = 45.0
 scale = Vector2(0.840613, 0.840613)
+
+[node name="Win bedroom" parent="." instance=ExtResource("9_lwapn")]
+visible = false
