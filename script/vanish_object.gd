@@ -1,10 +1,12 @@
 extends Area2D
 
 @export var vanishObject : Label
+@export var roomName : String
 @onready var EFFECT = preload("res://scene/particles.tscn")
 
 func _on_portal_area_input_event(viewport, event, shape_idx):
    if event.is_pressed() && vanishObject != null:
+      GameData.add_found_object(roomName, vanishObject.name)
       var effect = EFFECT.instantiate()
       add_child(effect)
       effect.global_position = event.position

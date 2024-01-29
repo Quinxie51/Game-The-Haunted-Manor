@@ -8,53 +8,62 @@
 [node name="kitchen corner" type="Node2D"]
 script = ExtResource("1_u085r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BackgroundImage" type="Sprite2D" parent="."]
 position = Vector2(484, 329)
 scale = Vector2(0.735273, 0.711011)
 texture = ExtResource("1_lemb1")
 
-[node name="cilantro" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Cilantro" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(517.642, 207.958)
 scale = Vector2(1.09747, 0.466213)
 vanishObject = NodePath("../../Objects/Cilantro")
+roomName = "Kitchen"
 
-[node name="kettle" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Kettle" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(-116.357, 302.34)
 vanishObject = NodePath("../../Objects/Kettle")
+roomName = "Kitchen"
 
-[node name="tea pot" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Tea pot" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(662.343, 57.5885)
 vanishObject = NodePath("../../Objects/Tea pot")
+roomName = "Kitchen"
 
-[node name="grape" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Grape" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(-301.929, 54.8514)
 scale = Vector2(0.838915, 0.504922)
 vanishObject = NodePath("../../Objects/Grape")
+roomName = "Kitchen"
 
-[node name="broccoli" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Broccoli" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(246.141, 326.335)
 scale = Vector2(0.820981, 0.820981)
 vanishObject = NodePath("../../Objects/Broccoli")
+roomName = "Kitchen"
 
-[node name="mango" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Mango" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(88.014, 60.7878)
 scale = Vector2(0.395255, 0.386907)
 vanishObject = NodePath("../../Objects/Mango")
+roomName = "Kitchen"
 
-[node name="oil" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Oil" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(10.4423, 350.33)
 scale = Vector2(0.429438, 0.770831)
 vanishObject = NodePath("../../Objects/Oil")
+roomName = "Kitchen"
 
-[node name="potato" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Potato" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(-408.743, 423.915)
 scale = Vector2(-0.616381, 0.276774)
 vanishObject = NodePath("../../Objects/Potato")
+roomName = "Kitchen"
 
-[node name="pan" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
+[node name="Pan" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("3_8mt5b")]
 position = Vector2(114.866, -19.1961)
 scale = Vector2(0.777898, 0.635041)
 vanishObject = NodePath("../../Objects/Pan")
+roomName = "Kitchen"
 
 [node name="Objects" type="ColorRect" parent="."]
 offset_top = -6.0

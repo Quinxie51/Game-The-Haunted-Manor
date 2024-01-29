@@ -7,6 +7,7 @@ var game_won = false
 
 
 func _on_restart_pressed():
+   AudioPlayer.play_sound("press")
    board.scramble_board()
    board.game_state = board.GAME_STATES.STARTED
 

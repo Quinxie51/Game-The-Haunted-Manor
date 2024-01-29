@@ -50,13 +50,15 @@ func get_puzzle():
    return $puzzle
 
 func _on_puzzle_slot_pressed():
-   active_puzzle.emit()
-   puzzle_found = true
+   if $"Win bedroom".claim_puzzle:
+      AudioPlayer.play_sound("press")
+      active_puzzle.emit()
+      puzzle_found = true
    
    
 func toggle_flashlight():
+   AudioPlayer.play_sound("press")
    get_flashlight.emit()
    return $Inventory/FlashLight_claim
-   
    
 

@@ -8,14 +8,16 @@ var answer = "NightFang"
 
 func _on_button_pressed():
    if player_answer.text == answer:
+      AudioPlayer.play_sound("correct")
       label.text = "Correct"
       label.add_theme_color_override("font_color", Color(0, 1, 0))
       correct_answer = true
       hide()
       shader.hide()
    else:
-       label.text = "Try again"
-       label.add_theme_color_override("font_color", Color(1, 0, 0))
+      AudioPlayer.play_sound("wrong")
+      label.text = "Try again"
+      label.add_theme_color_override("font_color", Color(1, 0, 0))
       
    $Timer.start()
       

@@ -54,6 +54,8 @@ func set_number_visible(state):
 func _on_Tile_pressed():
    if ui.puzzle_found:
       emit_signal("tile_pressed", number)
+   else:
+      AudioPlayer.play_sound("press")
 
 # Tile has finished sliding
 func _on_Tween_tween_completed(_object, _key):
