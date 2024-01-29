@@ -12,8 +12,8 @@ func _on_input_event(viewport, event, shape_idx):
          var targetScenePath = "res://scene/"+targetScene+".tscn"
          get_tree().change_scene_to_file(targetScenePath)
          
-         #time +=1
-      #elif time == 1:
-         #var targetScenePath = "res://scene/"+targetScene+".tscn"
-         #get_tree().change_scene_to_file(targetScenePath)
-         
+func _on_mouse_entered():
+   $sparkle.emitting = true
+
+func _on_mouse_exited():
+   $sparkle.emitting = false

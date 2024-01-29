@@ -1,9 +1,15 @@
 extends CanvasLayer
 
 signal get_flashlight
+signal active_puzzle
 @onready var flash_slot = $Inventory/FlashLight_claim
+@onready var puzzle_slot =$Inventory/puzzlePiece
+var puzzle_found = false
+
 func _ready():
    flash_slot.power_flashlight.connect(toggle_flashlight)
+   puzzle_slot.power_puzzle.connect(_on_puzzle_slot_pressed)
+
 
 func _process(delta):
    var current_scene = get_tree().get_current_scene()
@@ -43,11 +49,14 @@ func get_keyPad():
 func get_puzzle():
    return $puzzle
 
-func get_puzzlePiece():
-   return $Inventory/puzzlePiece
-
+func _on_puzzle_slot_pressed():
+   active_puzzle.emit()
+   puzzle_found = true
+   
+   
 func toggle_flashlight():
    get_flashlight.emit()
    return $Inventory/FlashLight_claim
+   
    
 

@@ -26,7 +26,8 @@ spread = 50.0
 initial_velocity_min = 2.0
 initial_velocity_max = 2.0
 gravity = Vector3(0, 0, 0)
-scale_max = 2.0
+scale_min = 2.0
+scale_max = 3.0
 color = Color(1, 1, 0.666667, 1)
 
 [node name="PortalArea" type="Area2D"]
@@ -45,9 +46,12 @@ autoplay = true
 energy = 1.5
 texture = ExtResource("3_bxxl0")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="sparkle" type="GPUParticles2D" parent="."]
 scale = Vector2(5.14234, 9.09475)
-amount = 30
+emitting = false
+amount = 40
 process_material = SubResource("ParticleProcessMaterial_plfvh")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

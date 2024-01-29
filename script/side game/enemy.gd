@@ -7,14 +7,14 @@ extends Node2D
 var player
  
 func _ready():
-   player = get_parent().find_child("test player")
+   player = get_parent().find_child("Player")
  
 func _physics_process(_delta):
    _aim()
    _check_player_collision()
  
 func _aim():
-   ray_cast.target_position = to_local(player.position)
+   ray_cast.target_position = to_local(player.position).normalized()*200
  
 func _check_player_collision():
    if ray_cast.get_collider() == player and timer.is_stopped():

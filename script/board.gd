@@ -240,7 +240,7 @@ func set_tile_position(r: int, c: int, val: int):
    object.set_position(Vector2(c, r) * tile_size)
 
 func _process(_delta):
-   var is_pressed = true
+   var is_pressed = false
    var dir = Vector2.ZERO
    if (Input.is_action_just_pressed("move_left")):
       dir.x = -1

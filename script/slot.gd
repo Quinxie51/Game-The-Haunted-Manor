@@ -1,5 +1,4 @@
 extends Panel
-var get_item = false
 
 signal power_flashlight
 
@@ -8,10 +7,8 @@ func _input(event):
       var ev: InputEventMouseButton = event
       if get_global_rect().has_point(ev.position):
          power_flashlight.emit()
-         get_item = true
-               
-func activate_flashLight():
-   return get_item
+         #get_item = true
+
    
          
       
