@@ -17,48 +17,57 @@ texture = ExtResource("1_v5cfl")
 position = Vector2(-421.532, -165.995)
 scale = Vector2(2.28176, 1.58462)
 vanishObject = NodePath("../../Objects/laptop")
+roomName = "Bedroom"
 
-[node name="teddy bear" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+[node name="small teddy bear" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(97.8397, -314.201)
 scale = Vector2(1, 1.56912)
 vanishObject = NodePath("../../Objects/small teddy bear")
+roomName = "Bedroom"
 
 [node name="lamp" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-653.684, -321.979)
 scale = Vector2(1.72345, 1.80559)
 vanishObject = NodePath("../../Objects/lamp")
+roomName = "Bedroom"
 
 [node name="orange hair clipper" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-403.907, 324.085)
 scale = Vector2(0.838915, 0.504922)
 vanishObject = NodePath("../../Objects/orange hair clipper")
+roomName = "Bedroom"
 
 [node name="brushes" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-829.845, -216.583)
 scale = Vector2(0.820981, 0.820981)
 vanishObject = NodePath("../../Objects/brushes")
+roomName = "Bedroom"
 
 [node name="glasses" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(274.657, -14.2281)
 scale = Vector2(0.750766, 0.350655)
 vanishObject = NodePath("../../Objects/glasses")
+roomName = "Bedroom"
 
 [node name="blue pen" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-61.6875, -96.435)
 rotation = 0.331361
 scale = Vector2(0.429438, 0.770831)
 vanishObject = NodePath("../../Objects/blue pen")
+roomName = "Bedroom"
 
 [node name="pink towel" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(-471.469, 120.148)
 scale = Vector2(-0.616381, 0.592954)
 vanishObject = NodePath("../../Objects/pink towel")
+roomName = "Bedroom"
 
 [node name="sandwich maker" parent="BackgroundImage" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
 position = Vector2(364.25, 80.626)
 rotation = -0.29904
 scale = Vector2(1.54165, 0.635041)
 vanishObject = NodePath("../../Objects/sandwich maker")
+roomName = "Bedroom"
 
 [node name="Objects" type="ColorRect" parent="."]
 offset_top = -6.0

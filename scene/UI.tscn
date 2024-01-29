@@ -71,5 +71,5 @@ offset_right = 75.0
 offset_bottom = 45.0
 scale = Vector2(0.840613, 0.840613)
 
-[node name="Win bedroom" parent="." instance=ExtResource("9_lwapn")]
+[node name="Win_bedroom" parent="." instance=ExtResource("9_lwapn")]
 visible = false

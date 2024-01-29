@@ -38,7 +38,7 @@ func show_puzzle(solve:bool):
       $puzzle.visible = solve
       
 func show_bedroom_win(found:bool):
-   $"Win bedroom".visible = found
+   $"Win_bedroom".visible = found
    
 func show_puzzle_piece(show: bool):
    $Inventory/puzzlePiece/puzzle.visible = show
@@ -50,15 +50,16 @@ func get_puzzle():
    return $puzzle
 
 func _on_puzzle_slot_pressed():
-   if $"Win bedroom".claim_puzzle:
+   if $"Win bedroom".is_puzzle_claimed:
       AudioPlayer.play_sound("press")
       active_puzzle.emit()
       puzzle_found = true
    
    
 func toggle_flashlight():
-   AudioPlayer.play_sound("press")
-   get_flashlight.emit()
-   return $Inventory/FlashLight_claim
-   
+   if $Win_kitchen.is_flashlight_claimed:
+      AudioPlayer.play_sound("press")
+      get_flashlight.emit()
+      return $Inventory/FlashLight_claim
+      
 
