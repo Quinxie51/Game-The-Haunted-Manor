@@ -67,6 +67,7 @@ func _on_ok_pressed():
       await get_tree().create_timer(1.5).timeout
       password_found = true 
       hide()
+      AudioPlayer.play_sound("creak")
       var targetScenePath = "res://scene/"+targetScene+".tscn"
       get_tree().change_scene_to_file(targetScenePath)
    else:

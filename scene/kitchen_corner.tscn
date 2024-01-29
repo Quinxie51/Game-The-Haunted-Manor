@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl5naqfkdsyp4"]
+[gd_scene load_steps=5 format=3 uid="uid://bl5naqfkdsyp4"]
 
 [ext_resource type="Texture2D" uid="uid://dkgg4s2s1121h" path="res://asset/room asset/kitchen/kitchen corner.png" id="1_lemb1"]
 [ext_resource type="Script" path="res://script/kitchen_corner.gd" id="1_u085r"]
 [ext_resource type="PackedScene" uid="uid://ddnkdt54k43pj" path="res://scene/vanish_object.tscn" id="3_8mt5b"]
-[ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="6_b722t"]
-[ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="7_5lkor"]
+[ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="4_tucgp"]
 
 [node name="kitchen corner" type="Node2D"]
 script = ExtResource("1_u085r")
@@ -63,6 +62,7 @@ offset_right = 1029.0
 offset_bottom = 86.0
 scale = Vector2(1.04037, 0.915131)
 color = Color(0.333333, 0.207843, 0.121569, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Kettle" type="Label" parent="Objects"]
 layout_mode = 0
@@ -73,6 +73,7 @@ offset_bottom = 33.0
 scale = Vector2(1.36, 1.36)
 text = "Kettle
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Tea pot" type="Label" parent="Objects"]
 layout_mode = 0
@@ -83,6 +84,7 @@ offset_bottom = 33.0
 scale = Vector2(1.36, 1.36)
 text = "Tea pot
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Grape" type="Label" parent="Objects"]
 layout_mode = 0
@@ -93,6 +95,7 @@ offset_bottom = 99.266
 scale = Vector2(1.36, 1.36)
 text = "Grape
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Broccoli" type="Label" parent="Objects"]
 layout_mode = 0
@@ -104,6 +107,7 @@ scale = Vector2(1.36, 1.36)
 text = "Broccoli
 
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Mango" type="Label" parent="Objects"]
 layout_mode = 0
@@ -114,6 +118,7 @@ offset_bottom = 70.0
 scale = Vector2(1.36, 1.36)
 text = "Mango
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Pan" type="Label" parent="Objects"]
 layout_mode = 0
@@ -124,6 +129,7 @@ offset_bottom = 32.0
 scale = Vector2(1.36, 1.36)
 text = "Pan
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Cilantro" type="Label" parent="Objects"]
 layout_mode = 0
@@ -134,6 +140,7 @@ offset_bottom = 65.0
 scale = Vector2(1.36, 1.36)
 text = "Cilantro
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Oil" type="Label" parent="Objects"]
 layout_mode = 0
@@ -145,6 +152,7 @@ scale = Vector2(1.36, 1.36)
 text = "Oil
 
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Potato" type="Label" parent="Objects"]
 layout_mode = 0
@@ -156,14 +164,8 @@ scale = Vector2(1.36, 1.36)
 text = "Potato
 
 "
+metadata/_edit_use_anchors_ = true
 
-[node name="exit kitchen" parent="." instance=ExtResource("6_b722t")]
-position = Vector2(116, 344)
-rotation = 1.57382
-scale = Vector2(0.68001, 0.68001)
+[node name="exit" parent="." instance=ExtResource("4_tucgp")]
+position = Vector2(78, 435)
 targetScene = "kitchen"
-
-[node name="Sprite2D" type="Sprite2D" parent="exit kitchen"]
-rotation = 1.58696
-scale = Vector2(0.249954, 0.249954)
-texture = ExtResource("7_5lkor")

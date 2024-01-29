@@ -1,0 +1,216 @@
+[gd_scene load_steps=4 format=3 uid="uid://ir53df7x8gs8"]
+
+[ext_resource type="Script" path="res://script/bedroom_corner.gd" id="1_ce5ur"]
+[ext_resource type="Texture2D" uid="uid://pxr53fk7dp28" path="res://asset/room asset/bedroom/bedroom corner.png" id="1_v5cfl"]
+[ext_resource type="PackedScene" uid="uid://ddnkdt54k43pj" path="res://scene/vanish_object.tscn" id="2_ol6kg"]
+
+[node name="bedroom_corner" type="Node2D"]
+script = ExtResource("1_ce5ur")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 330)
+scale = Vector2(0.705234, 0.6429)
+texture = ExtResource("1_v5cfl")
+
+[node name="laptop" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-421.532, -165.995)
+scale = Vector2(2.28176, 1.58462)
+vanishObject = NodePath("../../Objects/laptop")
+
+[node name="teddy bear" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(97.8397, -314.201)
+scale = Vector2(1, 1.56912)
+vanishObject = NodePath("../../Objects/big teddy bear")
+
+[node name="lamp" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-653.684, -321.979)
+scale = Vector2(1.72345, 1.80559)
+vanishObject = NodePath("../../Objects/lamp")
+
+[node name="orange hair clipper" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-403.907, 324.085)
+scale = Vector2(0.838915, 0.504922)
+vanishObject = NodePath("../../Objects/orange hair clipper")
+
+[node name="brushes" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-829.845, -216.583)
+scale = Vector2(0.820981, 0.820981)
+vanishObject = NodePath("../../Objects/brushes")
+
+[node name="glasses" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(274.657, -14.2281)
+scale = Vector2(0.750766, 0.350655)
+vanishObject = NodePath("../../Objects/glasses")
+
+[node name="blue pen" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-61.6875, -96.435)
+rotation = 0.331361
+scale = Vector2(0.429438, 0.770831)
+vanishObject = NodePath("../../Objects/blue pen")
+
+[node name="pink towel" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(-471.469, 120.148)
+scale = Vector2(-0.616381, 0.592954)
+vanishObject = NodePath("../../Objects/pink towel")
+
+[node name="sandwich maker" parent="Sprite2D" node_paths=PackedStringArray("vanishObject") instance=ExtResource("2_ol6kg")]
+position = Vector2(364.25, 80.626)
+rotation = -0.29904
+scale = Vector2(1.54165, 0.635041)
+vanishObject = NodePath("../../Objects/sandwich maker")
+
+[node name="Objects" type="ColorRect" parent="."]
+offset_top = -6.0
+offset_right = 1029.0
+offset_bottom = 86.0
+scale = Vector2(1.04037, 0.915131)
+color = Color(0.333333, 0.207843, 0.121569, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="laptop" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0723372
+anchor_top = 0.0338356
+anchor_right = 0.0762245
+anchor_bottom = 0.0338356
+offset_left = 757.0
+offset_top = 10.0
+offset_right = 803.0
+offset_bottom = 33.0
+scale = Vector2(1.36, 1.36)
+text = "laptop
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="blue pen" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.086795
+anchor_top = 0.0694684
+anchor_right = 0.0965132
+anchor_bottom = 0.0694685
+offset_left = 547.0
+offset_top = 10.0
+offset_right = 605.0
+offset_bottom = 33.0
+scale = Vector2(1.36, 1.36)
+text = "blue pen"
+metadata/_edit_use_anchors_ = true
+
+[node name="pink towel" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625873
+anchor_top = -0.0237549
+anchor_right = 0.0625873
+anchor_bottom = -0.0237549
+offset_left = 558.453
+offset_top = 50.266
+offset_right = 651.453
+offset_bottom = 99.266
+scale = Vector2(1.36, 1.36)
+text = "pink towel
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="sandwich maker" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00420541
+anchor_top = 0.0789786
+anchor_right = 0.0589627
+anchor_bottom = 0.361587
+offset_left = 384.0
+offset_top = 43.0
+offset_right = 446.0
+offset_bottom = 92.0
+scale = Vector2(1.36, 1.36)
+text = "sandwich maker
+
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="lamp" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.085641
+anchor_top = 0.0117451
+anchor_right = 0.085641
+anchor_bottom = 0.294354
+offset_left = 751.0
+offset_top = 47.0
+offset_right = 804.0
+offset_bottom = 70.0
+scale = Vector2(1.36, 1.36)
+text = "lamp
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="orange hair clipper" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0309638
+anchor_top = 0.0684603
+anchor_right = 0.0671898
+anchor_bottom = 0.0684604
+offset_left = 400.0
+offset_top = 9.00001
+offset_right = 446.0
+offset_bottom = 32.0
+scale = Vector2(1.36, 1.36)
+text = "orange hair clipper"
+metadata/_edit_use_anchors_ = true
+
+[node name="glasses" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00269154
+anchor_top = 0.0304601
+anchor_right = -0.00269154
+anchor_bottom = 0.313069
+offset_left = 220.0
+offset_top = 42.0
+offset_right = 282.0
+offset_bottom = 65.0
+scale = Vector2(1.36, 1.36)
+text = "glasses
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="brushes" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0186177
+anchor_top = 0.0348437
+anchor_right = -0.00306863
+anchor_bottom = 0.0348437
+offset_left = 246.0
+offset_top = 11.0
+offset_right = 292.0
+offset_bottom = 60.0
+scale = Vector2(1.36, 1.36)
+text = "brushes
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="big teddy bear" type="Label" parent="Objects"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0556285
+anchor_top = 0.0924345
+anchor_right = 0.00268055
+anchor_bottom = 0.0924345
+offset_left = 88.0
+offset_top = 21.0
+offset_right = 140.0
+offset_bottom = 70.0
+scale = Vector2(1.36, 1.36)
+text = "teddy bear
+
+"
+metadata/_edit_use_anchors_ = true

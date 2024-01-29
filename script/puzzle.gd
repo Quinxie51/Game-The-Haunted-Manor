@@ -15,6 +15,7 @@ func _on_board_game_won():
    game_won = true
    await get_tree().create_timer(1.5).timeout
    hide()
+   AudioPlayer.play_sound("creak")
    var targetScenePath = "res://scene/"+targetScene+".tscn"
    get_tree().change_scene_to_file(targetScenePath)
 func puzzle_won():

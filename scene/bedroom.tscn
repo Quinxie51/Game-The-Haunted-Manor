@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://4k8yogiy44eh"]
+[gd_scene load_steps=5 format=3 uid="uid://4k8yogiy44eh"]
 
 [ext_resource type="Script" path="res://script/bedroom.gd" id="1_wuu5j"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_6tnu1"]
 [ext_resource type="Texture2D" uid="uid://1ecyu66e3ayv" path="res://asset/room asset/bedroom/bedroom.png" id="2_s7vkk"]
 [ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="3_ahg2i"]
-[ext_resource type="Script" path="res://script/hint.gd" id="5_k0sya"]
 
 [node name="bedroom" type="Node2D"]
 position = Vector2(-19, -1)
@@ -24,6 +23,7 @@ targetScene = "living_room"
 position = Vector2(-715.264, -173.295)
 scale = Vector2(1.49165, 1.49165)
 
-[node name="hint" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
-position = Vector2(38.1477, 65.7881)
-script = ExtResource("5_k0sya")
+[node name="PortalArea2" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
+position = Vector2(31.7898, 57.7651)
+scale = Vector2(1.00736, 1.00736)
+targetScene = "draw"
