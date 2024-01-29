@@ -24,6 +24,7 @@ grow_vertical = 2
 script = ExtResource("1_up5h1")
 
 [node name="frame" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 396.0
 offset_top = 71.0
 offset_right = 879.0

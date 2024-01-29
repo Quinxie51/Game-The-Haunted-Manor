@@ -5,6 +5,7 @@ var game_won = false
 @export var targetScene: String
 
 
+
 func _on_restart_pressed():
    board.scramble_board()
    board.game_state = board.GAME_STATES.STARTED

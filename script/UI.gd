@@ -43,6 +43,9 @@ func get_keyPad():
 func get_puzzle():
    return $puzzle
 
+func get_puzzlePiece():
+   return $Inventory/puzzlePiece
+
 func toggle_flashlight():
    get_flashlight.emit()
    return $Inventory/FlashLight_claim

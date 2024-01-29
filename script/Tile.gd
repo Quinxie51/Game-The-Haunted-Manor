@@ -1,6 +1,8 @@
 extends TextureButton
 
 var number
+@onready var ui_layer = $"/root/Ui"
+#var puzzlePiece = ui_layer.get_puzzlePiece()
 
 
 signal tile_pressed
@@ -52,7 +54,8 @@ func set_number_visible(state):
 
 # Tile is pressed
 func _on_Tile_pressed():
-   emit_signal("tile_pressed", number)
+   #if puzzlePiece.activate_puzzle():
+      emit_signal("tile_pressed", number)
 
 # Tile has finished sliding
 func _on_Tween_tween_completed(_object, _key):

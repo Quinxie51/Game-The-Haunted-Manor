@@ -26,4 +26,4 @@ scale = Vector2(1.49165, 1.49165)
 [node name="PortalArea2" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
 position = Vector2(31.7898, 57.7651)
 scale = Vector2(1.00736, 1.00736)
-targetScene = "draw"
+targetScene = "bedroom_corner"

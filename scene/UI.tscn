@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://feq2q57r83ne"]
+[gd_scene load_steps=11 format=3 uid="uid://feq2q57r83ne"]
 
 [ext_resource type="Script" path="res://script/UI.gd" id="1_5imsx"]
 [ext_resource type="PackedScene" uid="uid://daqgpwslovm8i" path="res://scene/slot.tscn" id="1_vo8ms"]
 [ext_resource type="PackedScene" uid="uid://bkjx8cnvhb766" path="res://scene/win_kitchen.tscn" id="2_xf6po"]
 [ext_resource type="Texture2D" uid="uid://dlc0hvknkh0td" path="res://asset/room asset/living room/341.png" id="3_rkdnw"]
 [ext_resource type="Script" path="res://script/slot.gd" id="4_16i2j"]
+[ext_resource type="Script" path="res://script/puzzlePiece.gd" id="5_4s4as"]
 [ext_resource type="Texture2D" uid="uid://6rorjmdnvrul" path="res://asset/room asset/bedroom/puzzle miss.png" id="5_lcait"]
 [ext_resource type="PackedScene" uid="uid://cc2bgu7xeeiwt" path="res://scene/keypad.tscn" id="5_mv4no"]
 [ext_resource type="PackedScene" uid="uid://cpiek3beljyi6" path="res://scene/puzzle.tscn" id="7_gf4at"]
@@ -34,6 +35,7 @@ texture = ExtResource("3_rkdnw")
 
 [node name="puzzlePiece" parent="Inventory" instance=ExtResource("1_vo8ms")]
 layout_mode = 2
+script = ExtResource("5_4s4as")
 
 [node name="puzzle" type="TextureRect" parent="Inventory/puzzlePiece"]
 visible = false
