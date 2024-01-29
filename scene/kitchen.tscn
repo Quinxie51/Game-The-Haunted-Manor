@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://q4k8ngle40st" path="res://asset/room asset/kitchen/kitchen 3.png" id="1_n4hmi"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_spi1m"]
-[ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_32kwi"]
+[ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="3_yyfwe"]
 
 [node name="kitchen" type="Node2D"]
 
@@ -17,13 +17,7 @@ rotation = 1.65244
 scale = Vector2(1.52617, 2.37016)
 targetScene = "kitchen_corner"
 
-[node name="exit kitchen" parent="." instance=ExtResource("2_spi1m")]
-position = Vector2(117, 344)
-rotation = 1.57382
-scale = Vector2(0.68001, 0.68001)
+[node name="exit" parent="kitchen image" instance=ExtResource("3_yyfwe")]
+position = Vector2(-610.256, 30.7468)
+scale = Vector2(1.5507, 1.5507)
 targetScene = "living_room"
-
-[node name="Sprite2D" type="Sprite2D" parent="exit kitchen"]
-rotation = 1.58696
-scale = Vector2(0.249954, 0.249954)
-texture = ExtResource("3_32kwi")

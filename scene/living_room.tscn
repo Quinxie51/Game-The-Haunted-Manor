@@ -37,7 +37,7 @@ script = ExtResource("5_semv7")
 targetScene = "bedroom"
 
 [node name="KitchenDoor" parent="." instance=ExtResource("3_0clsr")]
-position = Vector2(401.498, 321.369)
+position = Vector2(400.603, 373.979)
 scale = Vector2(1.24, 1.28)
 targetScene = "kitchen"
 

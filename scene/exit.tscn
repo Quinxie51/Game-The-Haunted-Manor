@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddlryuisllu00"]
+
+[ext_resource type="AudioStream" uid="uid://bhtclc4dudpkw" path="res://asset/music/Sound Effects - Footsteps-[AudioTrimmer.com]-[AudioTrimmer.com].mp3" id="1_862py"]
+[ext_resource type="Script" path="res://script/exit.gd" id="1_hascf"]
+[ext_resource type="Texture2D" uid="uid://c2565jkijranq" path="res://asset/room asset/living room/flashlight.png" id="2_70apd"]
+[ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_2xy2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1q5fj"]
+size = Vector2(12.9729, 8.3696)
+
+[node name="exit" type="Area2D"]
+scale = Vector2(1.16, 1.16)
+script = ExtResource("1_hascf")
+
+[node name="PortalCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-2.58621, 1.72414)
+scale = Vector2(8.24, 8.24)
+shape = SubResource("RectangleShape2D_1q5fj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_862py")
+autoplay = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 1.19
+texture = ExtResource("2_70apd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6.03448, 8.62068)
+rotation = -3.12241
+scale = Vector2(0.169971, 0.169971)
+texture = ExtResource("3_2xy2k")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
