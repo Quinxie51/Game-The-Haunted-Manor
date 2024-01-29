@@ -1,28 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://72yhymagrmnf"]
+[gd_scene load_steps=5 format=3 uid="uid://72yhymagrmnf"]
 
 [ext_resource type="Texture2D" uid="uid://c1lkbdlc1hfc7" path="res://asset/room asset/library/library 1.png" id="1_2uax5"]
+[ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="2_4dkux"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_p4oax"]
-[ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_0dxr5"]
+[ext_resource type="AudioStream" uid="uid://dwoarka6bflkt" path="res://asset/music/door-creaking-121673_10vi55xt.mp3" id="4_a1y7i"]
 
 [node name="Library" type="Node2D"]
+scale = Vector2(0.998605, 1.00186)
 
 [node name="library" type="Sprite2D" parent="."]
 position = Vector2(499, 322)
 scale = Vector2(0.619456, 0.64471)
 texture = ExtResource("1_2uax5")
 
-[node name="wolf world" parent="library" instance=ExtResource("2_p4oax")]
-position = Vector2(216.23, 127.022)
-scale = Vector2(1.01372, 0.470871)
-targetScene = "level_1"
-
-[node name="exit library" parent="." instance=ExtResource("2_p4oax")]
-position = Vector2(117, 344)
-rotation = 1.57382
-scale = Vector2(0.68001, 0.68001)
+[node name="exit" parent="library" instance=ExtResource("2_4dkux")]
+position = Vector2(-660.257, 223.356)
 targetScene = "living_room"
 
-[node name="Sprite2D" type="Sprite2D" parent="exit library"]
-rotation = 1.58696
-scale = Vector2(0.249954, 0.249954)
-texture = ExtResource("3_0dxr5")
+[node name="PortalArea" parent="library" instance=ExtResource("2_p4oax")]
+position = Vector2(211.476, 220.254)
+scale = Vector2(1.38744, 1)
+targetScene = "level_1"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_a1y7i")

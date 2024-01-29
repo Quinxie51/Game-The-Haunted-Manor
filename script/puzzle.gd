@@ -10,6 +10,7 @@ func _on_restart_pressed():
    board.game_state = board.GAME_STATES.STARTED
 
 func _on_board_game_won():
+   AudioPlayer.play_sound("correct")
    label.text = 'You win'
    game_won = true
    await get_tree().create_timer(1.5).timeout
@@ -19,3 +20,7 @@ func _on_board_game_won():
 func puzzle_won():
    return game_won
 
+func _on_button_pressed():
+   AudioPlayer.play_sound("press")
+   board.scramble_board()
+   hide()

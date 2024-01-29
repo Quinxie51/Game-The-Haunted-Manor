@@ -3,29 +3,27 @@
 [ext_resource type="Script" path="res://script/bedroom.gd" id="1_wuu5j"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_6tnu1"]
 [ext_resource type="Texture2D" uid="uid://1ecyu66e3ayv" path="res://asset/room asset/bedroom/bedroom.png" id="2_s7vkk"]
-[ext_resource type="Texture2D" uid="uid://daltxdhb1e8sh" path="res://asset/other/arrow.png" id="3_wixqj"]
-[ext_resource type="PackedScene" uid="uid://feq2q57r83ne" path="res://scene/UI.tscn" id="4_tb1l3"]
+[ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="3_ahg2i"]
+[ext_resource type="Script" path="res://script/hint.gd" id="5_k0sya"]
 
 [node name="bedroom" type="Node2D"]
 position = Vector2(-19, -1)
 scale = Vector2(0.956809, 0.947798)
 script = ExtResource("1_wuu5j")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="bedroom bg" type="Sprite2D" parent="."]
 position = Vector2(595.73, 341.845)
 scale = Vector2(0.657538, 0.657538)
 texture = ExtResource("2_s7vkk")
 
-[node name="exit bedroom" parent="." instance=ExtResource("2_6tnu1")]
-position = Vector2(180.809, 625.661)
-rotation = 1.57382
-scale = Vector2(0.68001, 0.68001)
+[node name="exit" parent="bedroom bg" instance=ExtResource("3_ahg2i")]
+position = Vector2(-651.685, 237.479)
 targetScene = "living_room"
 
-[node name="Sprite2D" type="Sprite2D" parent="exit bedroom"]
-position = Vector2(-3.09856, 1.54632)
-rotation = 1.58696
-scale = Vector2(0.249954, 0.249954)
-texture = ExtResource("3_wixqj")
+[node name="PortalArea" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
+position = Vector2(-715.264, -173.295)
+scale = Vector2(1.49165, 1.49165)
 
-[node name="UILayer" parent="." instance=ExtResource("4_tb1l3")]
+[node name="hint" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
+position = Vector2(38.1477, 65.7881)
+script = ExtResource("5_k0sya")

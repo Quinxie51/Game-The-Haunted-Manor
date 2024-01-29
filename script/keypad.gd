@@ -80,5 +80,6 @@ func is_password_found():
    return password_found
    
 func _on_button_pressed():
+   AudioPlayer.play_sound("press")
    hide()
    label.text = ""

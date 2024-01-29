@@ -37,14 +37,15 @@ script = ExtResource("5_semv7")
 targetScene = "bedroom"
 
 [node name="KitchenDoor" parent="." instance=ExtResource("3_0clsr")]
-position = Vector2(400.603, 373.979)
-scale = Vector2(1.24, 1.28)
+position = Vector2(403.402, 408.946)
+scale = Vector2(1.24, 1.04666)
 targetScene = "kitchen"
 
 [node name="LibraryDoor" parent="." instance=ExtResource("3_0clsr")]
 position = Vector2(835.46, 296.075)
 scale = Vector2(1.05429, 0.648024)
 script = ExtResource("6_0242g")
+targetScene = "library"
 
 [node name="709" type="TextureRect" parent="."]
 offset_left = 976.707
