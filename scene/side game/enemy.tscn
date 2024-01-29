@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmwuy2n3lq2fe"]
+
+[ext_resource type="Texture2D" uid="uid://djaeqfayggyuw" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/bearded-walk/bearded-walk-1.png" id="1_6m60u"]
+[ext_resource type="Script" path="res://script/side game/enemy.gd" id="1_cnlv6"]
+[ext_resource type="PackedScene" uid="uid://d0ko45ki1s81g" path="res://scene/side game/bullet.tscn" id="2_57boe"]
+
+[node name="enemy" type="Node2D"]
+script = ExtResource("1_cnlv6")
+ammo = ExtResource("2_57boe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.99021, 1.99021)
+texture = ExtResource("1_6m60u")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 18
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

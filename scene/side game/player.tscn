@@ -79,7 +79,7 @@ size = Vector2(34, 112)
 position = Vector2(520, 283)
 scale = Vector2(0.660403, 0.660403)
 collision_layer = 2
-collision_mask = 5
+collision_mask = 21
 script = ExtResource("1_nv4sg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

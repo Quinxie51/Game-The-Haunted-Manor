@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ko45ki1s81g"]
+
+[ext_resource type="Script" path="res://script/side game/bullet.gd" id="1_ptt87"]
+[ext_resource type="Texture2D" uid="uid://bvjcu28mky4hg" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/barrel.png" id="1_u4efr"]
+
+[node name="bullet" type="Area2D"]
+scale = Vector2(1.84, 1.84)
+script = ExtResource("1_ptt87")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u4efr")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

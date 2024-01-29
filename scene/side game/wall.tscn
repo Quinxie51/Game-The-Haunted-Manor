@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbbskrgdy5psu"]
+
+[ext_resource type="Texture2D" uid="uid://xlotspicjcg7" path="res://asset/side game asset/GothicVania-town-files/PNG/environment/props-sliced/crate-stack.png" id="1_23746"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3u5q"]
+size = Vector2(181.25, 147.5)
+
+[node name="wall" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.316086, -8.45883)
+scale = Vector2(2.45709, 2.45709)
+texture = ExtResource("1_23746")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.375, -12)
+shape = SubResource("RectangleShape2D_w3u5q")

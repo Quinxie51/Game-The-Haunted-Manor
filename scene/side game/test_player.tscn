@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://byb2fm4eo1d2q"]
+
+[ext_resource type="Script" path="res://script/side game/test_player.gd" id="1_gq3t3"]
+[ext_resource type="Texture2D" uid="uid://bgln1386nlg20" path="res://asset/side game asset/GothicVania-town-files/PNG/sprites/hat-man-idle/hat-man-idle-1.png" id="2_h8v4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sckao"]
+size = Vector2(20, 43)
+
+[node name="test player" type="CharacterBody2D"]
+scale = Vector2(1.53222, 1.53222)
+collision_layer = 2
+collision_mask = 16
+script = ExtResource("1_gq3t3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 0)
+texture = ExtResource("2_h8v4v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_sckao")

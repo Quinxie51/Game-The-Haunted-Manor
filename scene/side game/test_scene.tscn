@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca1emdbyl72jl"]
+
+[ext_resource type="PackedScene" uid="uid://dmwuy2n3lq2fe" path="res://scene/side game/enemy.tscn" id="1_0m00d"]
+[ext_resource type="PackedScene" uid="uid://byb2fm4eo1d2q" path="res://scene/side game/test_player.tscn" id="3_ndro8"]
+[ext_resource type="PackedScene" uid="uid://cbbskrgdy5psu" path="res://scene/side game/wall.tscn" id="3_u2jq2"]
+
+[node name="Test scene" type="Node2D"]
+
+[node name="enemy" parent="." instance=ExtResource("1_0m00d")]
+position = Vector2(529, 85)
+scale = Vector2(0.660403, 0.660403)
+
+[node name="wall" parent="." instance=ExtResource("3_u2jq2")]
+position = Vector2(536, 254)
+
+[node name="test player" parent="." instance=ExtResource("3_ndro8")]
+position = Vector2(581, 451)

@@ -3,6 +3,7 @@ extends Node2D
 @onready var light_node = $Light2D
 @onready var ui = $"/root/Ui"
 
+
 func _ready():
    ui.get_flashlight.connect(turn_on_light)
 
@@ -13,3 +14,5 @@ func _process(delta):
 
 func turn_on_light():
    light_node.visible = !light_node.visible
+   
+
