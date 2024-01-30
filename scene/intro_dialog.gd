@@ -67,3 +67,7 @@ func nextPhrase():
 
 func _on_skip_pressed():
    get_tree().change_scene_to_file("res://scene/main_game.tscn")
+
+
+func _on_credit_pressed():
+   $"../../../Credit scene".visible = true

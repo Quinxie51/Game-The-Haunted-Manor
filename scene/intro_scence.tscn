@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhd4fc1y1rhw0"]
+[gd_scene load_steps=8 format=3 uid="uid://dhd4fc1y1rhw0"]
 
 [ext_resource type="Texture2D" uid="uid://b7v18grc8j8tw" path="res://scene/outside.png" id="1_sewuy"]
 [ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="2_mabbx"]
 [ext_resource type="Script" path="res://scene/intro_dialog.gd" id="3_7vrkk"]
 [ext_resource type="Texture2D" uid="uid://t8tlthti7h4p" path="res://asset/other/Professor Benjamin.png" id="4_mc2io"]
 [ext_resource type="FontFile" uid="uid://b3vtjrd6fjv6g" path="res://asset/font/Melted Monster.ttf" id="5_xm7ys"]
+[ext_resource type="PackedScene" uid="uid://brxt6wppvs6wf" path="res://credit.tscn" id="6_dxmt3"]
 
 [sub_resource type="Theme" id="Theme_cw06n"]
 default_font = ExtResource("2_mabbx")
@@ -102,8 +103,18 @@ offset_left = 287.352
 offset_top = -202.751
 offset_right = 539.352
 offset_bottom = -163.751
+scale = Vector2(1, 1.00256)
 theme_override_fonts/font = ExtResource("2_mabbx")
 theme_override_font_sizes/font_size = 40
 text = "By Quinxie Doan"
 
+[node name="Credit scene" parent="." instance=ExtResource("6_dxmt3")]
+visible = false
+offset_left = 573.0
+offset_top = 326.0
+offset_right = 573.0
+offset_bottom = 326.0
+scale = Vector2(0.924024, 0.924024)
+
 [connection signal="pressed" from="outside manor/Control/Dialog Box/Skip" to="outside manor/Control/Dialog Box" method="_on_skip_pressed"]
+[connection signal="pressed" from="outside manor/Credit" to="outside manor/Control/Dialog Box" method="_on_credit_pressed"]
