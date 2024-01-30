@@ -25,6 +25,7 @@ offset_bottom = 160.538
 grow_horizontal = 1
 grow_vertical = 1
 scale = Vector2(1.06175, 1.06175)
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_vi82b")

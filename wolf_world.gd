@@ -6,6 +6,10 @@ var correct_answer = false
 var answer = "CursedBloodline"
 @onready var shader = $".."
 
+func _process(delta):
+   if Input.is_action_just_pressed("quit"):
+      get_tree().change_scene_to_file("res://scene/bedroom.tscn")
+      
 func _on_button_pressed():
    if player_answer.text == answer:
       AudioPlayer.play_sound("correct")
@@ -13,7 +17,9 @@ func _on_button_pressed():
       label.add_theme_color_override("font_color", Color(0, 1, 0))
       correct_answer = true
       hide()
-      shader.hide()
+      get_tree().change_scene_to_file("res://video wolf.tscn")
+
+      
    else:
       AudioPlayer.play_sound("wrong")
       label.text = "Try again"

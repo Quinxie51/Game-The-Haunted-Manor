@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://4k8yogiy44eh"]
+[gd_scene load_steps=7 format=3 uid="uid://4k8yogiy44eh"]
 
 [ext_resource type="Script" path="res://script/bedroom.gd" id="1_wuu5j"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_6tnu1"]
 [ext_resource type="Texture2D" uid="uid://1ecyu66e3ayv" path="res://asset/room asset/bedroom/bedroom.png" id="2_s7vkk"]
 [ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="3_ahg2i"]
+[ext_resource type="Script" path="res://script/woman portal.gd" id="5_f68ln"]
+[ext_resource type="Script" path="res://script/enter_wolf.gd" id="5_xp6nr"]
 
 [node name="bedroom" type="Node2D"]
 position = Vector2(-19, -1)
@@ -22,11 +24,18 @@ targetScene = "living_room"
 [node name="PortalArea" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
 position = Vector2(-715.264, -173.295)
 scale = Vector2(1.49165, 1.49165)
+script = ExtResource("5_xp6nr")
+targetScene = "wolf_world"
 
 [node name="PortalArea2" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
 position = Vector2(31.7898, 57.7651)
 scale = Vector2(1.00736, 1.00736)
 targetScene = "bedroom_corner"
+
+[node name="woman" parent="bedroom bg" instance=ExtResource("2_6tnu1")]
+position = Vector2(373.527, -113.926)
+script = ExtResource("5_f68ln")
+targetScene = "woman_talk"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(923.904, 456.848)

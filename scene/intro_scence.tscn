@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhd4fc1y1rhw0"]
+
+[ext_resource type="Texture2D" uid="uid://b7v18grc8j8tw" path="res://scene/outside.png" id="1_sewuy"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="2_mabbx"]
+[ext_resource type="Script" path="res://scene/intro_dialog.gd" id="3_7vrkk"]
+[ext_resource type="Texture2D" uid="uid://t8tlthti7h4p" path="res://asset/other/Professor Benjamin.png" id="4_mc2io"]
+
+[sub_resource type="Theme" id="Theme_cw06n"]
+default_font = ExtResource("2_mabbx")
+
+[node name="Intro scene" type="Node2D"]
+
+[node name="outside manor" type="Sprite2D" parent="."]
+position = Vector2(584, 346)
+scale = Vector2(0.68557, 0.68557)
+texture = ExtResource("1_sewuy")
+
+[node name="Control" type="Control" parent="outside manor"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -777.908
+offset_top = -185.384
+offset_right = -737.908
+offset_bottom = -145.384
+
+[node name="Dialog Box" type="ColorRect" parent="outside manor/Control"]
+offset_left = 385.534
+offset_top = 54.1064
+offset_right = 1580.53
+offset_bottom = 184.106
+scale = Vector2(0.905092, 3.21012)
+theme = SubResource("Theme_cw06n")
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_7vrkk")
+
+[node name="Skip" type="Button" parent="outside manor/Control/Dialog Box"]
+offset_left = 934.724
+offset_top = 98.1478
+offset_right = 1119.72
+offset_bottom = 145.148
+scale = Vector2(1.14514, 0.448458)
+theme_override_fonts/font = ExtResource("2_mabbx")
+theme_override_font_sizes/font_size = 40
+text = "Start Game
+"
+
+[node name="Portrait" type="Sprite2D" parent="outside manor/Control/Dialog Box"]
+position = Vector2(-78.9681, 55.8897)
+scale = Vector2(0.70039, 0.189553)
+texture = ExtResource("4_mc2io")
+
+[node name="Text" type="RichTextLabel" parent="outside manor/Control/Dialog Box"]
+layout_mode = 0
+offset_left = 157.936
+offset_top = 39.5318
+offset_right = 847.936
+offset_bottom = 85.5318
+scale = Vector2(1.33331, 0.604393)
+
+[node name="Name" type="RichTextLabel" parent="outside manor/Control/Dialog Box"]
+layout_mode = 0
+offset_left = 196.614
+offset_top = 19.9931
+offset_right = 881.614
+offset_bottom = 54.9931
+scale = Vector2(1.04467, 0.379683)
+theme_override_font_sizes/normal_font_size = 25
+
+[node name="Timer" type="Timer" parent="outside manor/Control/Dialog Box"]
+
+[node name="Indicator" type="Polygon2D" parent="outside manor/Control/Dialog Box"]
+position = Vector2(-478.994, -12.1822)
+scale = Vector2(1.10486, 0.311515)
+
+[connection signal="pressed" from="outside manor/Control/Dialog Box/Skip" to="outside manor/Control/Dialog Box" method="_on_skip_pressed"]

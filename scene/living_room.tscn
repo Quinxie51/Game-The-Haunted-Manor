@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://de5we43erlwy5"]
+[gd_scene load_steps=18 format=3 uid="uid://de5we43erlwy5"]
 
 [ext_resource type="Script" path="res://script/living_room.gd" id="1_ikd2p"]
 [ext_resource type="Texture2D" uid="uid://copgqmevgj5rh" path="res://asset/room asset/living room/living room.png" id="1_jl6h5"]
@@ -10,6 +10,20 @@
 [ext_resource type="Script" path="res://script/libraryDoor.gd" id="6_0242g"]
 [ext_resource type="Texture2D" uid="uid://bpd75gdrtkcar" path="res://asset/room asset/living room/2.png" id="6_kmvo2"]
 [ext_resource type="Texture2D" uid="uid://1ld4hngrc38q" path="res://asset/room asset/living room/341-9.png" id="8_phl1q"]
+[ext_resource type="Texture2D" uid="uid://ddxkj3ty85vv" path="res://scene/3.png" id="11_gtmss"]
+[ext_resource type="Script" path="res://script/hint area.gd" id="11_v1jxu"]
+[ext_resource type="Script" path="res://scene/hint.gd" id="13_qluhs"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="14_gtsvt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uefru"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcakr"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hat0i"]
+bg_color = Color(0.945098, 0.00392157, 0, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="living room" type="Node2D"]
 position = Vector2(-23, 3)
@@ -62,7 +76,7 @@ offset_top = 535.117
 offset_right = 1116.41
 offset_bottom = 1615.12
 rotation = -0.102086
-scale = Vector2(0.0258085, 0.0162484)
+scale = Vector2(0.0341402, 0.0214938)
 texture = ExtResource("6_kmvo2")
 
 [node name="341" type="TextureRect" parent="."]
@@ -82,3 +96,33 @@ offset_bottom = 1659.08
 rotation = -0.321331
 scale = Vector2(0.0318169, 0.0311771)
 texture = ExtResource("8_phl1q")
+
+[node name="hint area" parent="." instance=ExtResource("3_0clsr")]
+position = Vector2(194.008, 210.7)
+rotation = 1.59783
+scale = Vector2(1.00349, -0.47179)
+script = ExtResource("11_v1jxu")
+
+[node name="hint" type="Sprite2D" parent="hint area"]
+visible = false
+position = Vector2(133.869, 822.061)
+rotation = 1.58351
+scale = Vector2(0.712606, -0.335558)
+skew = 0.0447359
+texture = ExtResource("11_gtmss")
+script = ExtResource("13_qluhs")
+
+[node name="Button" type="Button" parent="hint area/hint"]
+offset_left = 522.091
+offset_top = -405.482
+offset_right = 580.091
+offset_bottom = -349.482
+theme_override_fonts/font = ExtResource("14_gtsvt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_uefru")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rcakr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hat0i")
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="hint area/hint/Button" to="hint area/hint" method="_on_button_pressed"]

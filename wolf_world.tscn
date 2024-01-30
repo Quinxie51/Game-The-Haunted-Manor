@@ -55,6 +55,7 @@ layer = 1
 visible = false
 
 [node name="Label" type="Label" parent="wolf world ui"]
+layout_mode = 0
 offset_left = 235.0
 offset_top = 152.0
 offset_right = 936.0
@@ -69,6 +70,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="wolf world ui"]
+layout_mode = 0
 offset_left = 350.0
 offset_top = 287.0
 offset_right = 823.0
@@ -82,6 +84,7 @@ alignment = 1
 clear_button_enabled = true
 
 [node name="Button" type="Button" parent="wolf world ui"]
+layout_mode = 0
 offset_left = 540.0
 offset_top = 404.0
 offset_right = 619.0
@@ -99,6 +102,7 @@ text = "OK"
 wait_time = 1.5
 
 [node name="Label2" type="Label" parent="wolf world ui"]
+layout_mode = 0
 offset_left = 456.0
 offset_top = 81.0
 offset_right = 699.0

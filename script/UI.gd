@@ -15,7 +15,7 @@ func _process(delta):
    var current_scene = get_tree().get_current_scene()
    if current_scene != null:
       var current_scene_name = get_tree().get_current_scene().name
-      var exclude_scenes = ["Main game", "level 1", "wolf world"]
+      var exclude_scenes = ["Main game", "level 1", "wolf world", "wolf talk", "woman talk", "both talk", "Intro scene"]
       if current_scene_name not in exclude_scenes:
          self.visible = true  
       else:
