@@ -74,6 +74,10 @@ func _on_ok_pressed():
       AudioPlayer.play_sound("wrong")
       status.add_theme_color_override("font_color", Color(1, 0, 0))
       status.text = "Try again"
+      await get_tree().create_timer(1.5).timeout
+      status.add_theme_color_override("font_color", Color(1, 1, 1))
+      status.text = "Enter 4 digits to unlock the door"
+      
    
       
       

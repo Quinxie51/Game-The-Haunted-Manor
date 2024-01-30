@@ -115,3 +115,4 @@ theme_override_font_sizes/font_size = 35
 text = "Press \"Q\" to quit "
 
 [connection signal="pressed" from="wolf world ui/Button" to="wolf world ui" method="_on_button_pressed"]
+[connection signal="timeout" from="wolf world ui/Timer" to="wolf world ui" method="_on_timer_timeout"]
