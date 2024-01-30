@@ -43,7 +43,7 @@ stream = ExtResource("2_swufh")
 autoplay = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-energy = 1.5
+energy = 0.6
 texture = ExtResource("3_bxxl0")
 
 [node name="sparkle" type="GPUParticles2D" parent="."]

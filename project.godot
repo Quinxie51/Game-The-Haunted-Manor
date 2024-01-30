@@ -21,7 +21,6 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GameData="*res://script/game_data.gd"
 AudioPlayer="*res://global data/AudioPlayer.tscn"
 Ui="*res://scene/UI.tscn"
-HiddenObject="*res://global data/hidden_object.tscn"
 
 [display]
 

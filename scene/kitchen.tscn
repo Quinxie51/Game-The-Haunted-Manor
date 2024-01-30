@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://q7wob65hh5tc"]
+[gd_scene load_steps=11 format=3 uid="uid://q7wob65hh5tc"]
 
 [ext_resource type="Texture2D" uid="uid://q4k8ngle40st" path="res://asset/room asset/kitchen/kitchen 3.png" id="1_n4hmi"]
 [ext_resource type="PackedScene" uid="uid://dnlwrmaxvqxdl" path="res://scene/portal.tscn" id="2_spi1m"]
 [ext_resource type="PackedScene" uid="uid://ddlryuisllu00" path="res://scene/exit.tscn" id="3_yyfwe"]
+[ext_resource type="Script" path="res://script/hint area.gd" id="4_fpyqd"]
+[ext_resource type="Texture2D" uid="uid://c7msagytor8wx" path="res://scene/2.png" id="4_s1vof"]
+[ext_resource type="Script" path="res://scene/hint.gd" id="5_efle4"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="6_pkpf5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isirt"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ya8u"]
+bg_color = Color(0.694118, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hnml8"]
+bg_color = Color(0.945098, 0.00392157, 0, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="kitchen" type="Node2D"]
 
@@ -21,3 +35,32 @@ targetScene = "kitchen_corner"
 position = Vector2(-610.256, 30.7468)
 scale = Vector2(1.5507, 1.5507)
 targetScene = "living_room"
+
+[node name="hint area" parent="kitchen image" instance=ExtResource("2_spi1m")]
+position = Vector2(139.697, 21.389)
+rotation = 1.59783
+scale = Vector2(0.922489, 1.14002)
+script = ExtResource("4_fpyqd")
+
+[node name="hint" type="Sprite2D" parent="kitchen image/hint area"]
+visible = false
+position = Vector2(-21.766, 129.512)
+rotation = -1.6042
+scale = Vector2(0.442549, 0.546733)
+skew = 0.0115277
+texture = ExtResource("4_s1vof")
+script = ExtResource("5_efle4")
+
+[node name="Button" type="Button" parent="kitchen image/hint area/hint"]
+offset_left = 522.091
+offset_top = -405.482
+offset_right = 580.091
+offset_bottom = -349.482
+theme_override_fonts/font = ExtResource("6_pkpf5")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_isirt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ya8u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hnml8")
+text = "X"
+
+[connection signal="pressed" from="kitchen image/hint area/hint/Button" to="kitchen image/hint area/hint" method="_on_button_pressed"]

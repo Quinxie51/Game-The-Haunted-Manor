@@ -15,7 +15,7 @@ func _process(delta):
    var current_scene = get_tree().get_current_scene()
    if current_scene != null:
       var current_scene_name = get_tree().get_current_scene().name
-      var exclude_scenes = ["Main game", "level 1"]
+      var exclude_scenes = ["Main game", "level 1", "wolf world"]
       if current_scene_name not in exclude_scenes:
          self.visible = true  
       else:
@@ -50,7 +50,7 @@ func get_puzzle():
    return $puzzle
 
 func _on_puzzle_slot_pressed():
-   if $"Win bedroom".is_puzzle_claimed:
+   if $"Win_bedroom".is_puzzle_claimed:
       AudioPlayer.play_sound("press")
       active_puzzle.emit()
       puzzle_found = true
