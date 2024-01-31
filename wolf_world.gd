@@ -25,6 +25,7 @@ func _on_button_pressed():
       label.text = "Try again"
       label.add_theme_color_override("font_color", Color(1, 0, 0))
       
+      
    $Timer.start()
       
 func _on_timer_timeout():

@@ -29,8 +29,10 @@ script/source = "extends Node2D
 
 @onready var startPoint = $StartPoint
 @onready var player = $Player
+@onready var wolf = $Player/Wolf
 @onready var ui = $shader/ui_side
 @export var targetScene: String
+
 
 
 func _ready():
@@ -50,12 +52,17 @@ func _on_deathzone_body_entered(player):
 func reset_game():
    player.velocity = Vector2.ZERO
    player.global_position = startPoint.global_position
+   wolf.velocity = Vector2.ZERO
+   wolf.global_position = startPoint.global_position
 
 
 func _on_finish_house_body_entered(body):
    ui.correct_answer = false
    player.active = false
    $win_text.visible = true
+   await get_tree().create_timer(5).timeout
+   get_tree().change_scene_to_file(\"res://outro_scene.tscn\")
+   
 
 
 func _on_button_pressed():
@@ -191,6 +198,7 @@ layer = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="win_text" type="Label" parent="."]
+visible = false
 offset_left = 5568.0
 offset_top = 288.0
 offset_right = 6023.0

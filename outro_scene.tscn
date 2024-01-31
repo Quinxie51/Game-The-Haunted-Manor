@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo6gc2xlx374f"]
+
+[ext_resource type="Texture2D" uid="uid://duk5i57g2uq78" path="res://asset/other/Psychedelic Bubblegum Pop_Xz-m1_kESIO5FHOGjX5noQ_game backdrop, walk away in the sunrise, a man and a woman_inference-img2img_2_1706658869.png" id="1_mu7h8"]
+[ext_resource type="FontFile" uid="uid://boaftq8ok4hvl" path="res://asset/font/Robot_Font.otf" id="2_jy5to"]
+[ext_resource type="Script" path="res://dialog 3.gd" id="3_2q8j0"]
+[ext_resource type="FontFile" uid="uid://b3vtjrd6fjv6g" path="res://asset/font/Melted Monster.ttf" id="4_a8wa6"]
+[ext_resource type="PackedScene" uid="uid://brxt6wppvs6wf" path="res://credit.tscn" id="5_vdpcm"]
+
+[sub_resource type="Theme" id="Theme_8ohxs"]
+default_font = ExtResource("2_jy5to")
+
+[node name="Outro scene" type="Node2D"]
+
+[node name="outside manor" type="Sprite2D" parent="."]
+position = Vector2(584, 346)
+scale = Vector2(0.68557, 0.68557)
+texture = ExtResource("1_mu7h8")
+
+[node name="Control" type="Control" parent="outside manor"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -777.908
+offset_top = -185.384
+offset_right = -737.908
+offset_bottom = -145.384
+metadata/_edit_use_anchors_ = true
+
+[node name="Dialog Box" type="ColorRect" parent="outside manor/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.48532
+anchor_top = -1.78683
+anchor_right = -0.860223
+anchor_bottom = -1.78683
+offset_left = 385.534
+offset_top = 54.1064
+offset_right = 1580.53
+offset_bottom = 184.106
+scale = Vector2(0.901025, 1.41323)
+theme = SubResource("Theme_8ohxs")
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_2q8j0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Text" type="RichTextLabel" parent="outside manor/Control/Dialog Box"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0574572
+anchor_top = -0.113544
+anchor_right = -0.0574572
+anchor_bottom = -0.113544
+offset_left = 157.936
+offset_top = 39.5318
+offset_right = 847.936
+offset_bottom = 85.5318
+scale = Vector2(1.68941, 1.79462)
+theme_override_font_sizes/normal_font_size = 15
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="outside manor/Control/Dialog Box"]
+
+[node name="Credit" type="Button" parent="outside manor"]
+offset_left = -762.869
+offset_top = 348.615
+offset_right = -469.869
+offset_bottom = 405.615
+theme_override_fonts/font = ExtResource("2_jy5to")
+theme_override_font_sizes/font_size = 50
+text = "Credit"
+
+[node name="Game name" type="Label" parent="outside manor"]
+offset_left = -380.705
+offset_top = -430.299
+offset_right = 497.295
+offset_bottom = -305.299
+theme_override_colors/font_color = Color(0.635294, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_a8wa6")
+theme_override_font_sizes/font_size = 100
+text = "The Haunted Manor
+"
+
+[node name="My name" type="Label" parent="outside manor"]
+offset_left = 233.382
+offset_top = -287.352
+offset_right = 485.382
+offset_bottom = -248.352
+scale = Vector2(1, 1.00256)
+theme_override_fonts/font = ExtResource("2_jy5to")
+theme_override_font_sizes/font_size = 40
+text = "By Quinxie Doan"
+
+[node name="Credit scene" parent="." instance=ExtResource("5_vdpcm")]
+visible = false
+offset_left = 539.0
+offset_top = 339.0
+offset_right = 539.0
+offset_bottom = 339.0
+
+[connection signal="pressed" from="outside manor/Credit" to="outside manor/Control/Dialog Box" method="_on_credit_pressed"]

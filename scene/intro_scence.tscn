@@ -24,6 +24,7 @@ offset_left = -777.908
 offset_top = -185.384
 offset_right = -737.908
 offset_bottom = -145.384
+metadata/_edit_use_anchors_ = true
 
 [node name="Dialog Box" type="ColorRect" parent="outside manor/Control"]
 layout_mode = 0
@@ -35,6 +36,7 @@ scale = Vector2(0.905092, 3.21012)
 theme = SubResource("Theme_cw06n")
 color = Color(0, 0, 0, 1)
 script = ExtResource("3_7vrkk")
+metadata/_edit_use_anchors_ = true
 
 [node name="Skip" type="Button" parent="outside manor/Control/Dialog Box"]
 layout_mode = 0
@@ -47,6 +49,7 @@ theme_override_fonts/font = ExtResource("2_mabbx")
 theme_override_font_sizes/font_size = 40
 text = "Start Game
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="Portrait" type="Sprite2D" parent="outside manor/Control/Dialog Box"]
 position = Vector2(-78.9681, 55.8897)
@@ -60,6 +63,7 @@ offset_top = 39.5318
 offset_right = 847.936
 offset_bottom = 85.5318
 scale = Vector2(1.34923, 0.579593)
+metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="RichTextLabel" parent="outside manor/Control/Dialog Box"]
 layout_mode = 0
@@ -69,6 +73,7 @@ offset_right = 881.614
 offset_bottom = 54.9931
 scale = Vector2(1.04467, 0.379683)
 theme_override_font_sizes/normal_font_size = 25
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="outside manor/Control/Dialog Box"]
 
