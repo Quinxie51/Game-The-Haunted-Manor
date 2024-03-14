@@ -9,6 +9,8 @@
 - Efficient management of over 500 project assets using version control systems like GitHub.
 - Resulted in a polished escape room game with a player retention rate of over 80%.
 
+  ![Game Screenshot](asset/demo1.jpg)
+
 ## How to Play
 1. Download or clone the repository to your local machine.
 2. Open the project in the Godot game engine.
