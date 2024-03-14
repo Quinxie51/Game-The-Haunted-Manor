@@ -1,6 +1,7 @@
- ![Game Screenshot](asset/demo3.jpg)
+
 # Project Name: The Haunted Manor
 
+ ![Game Screenshot](asset/demo3.jpg)
 ## Description
 "The Haunted Manor" is an immersive adventure puzzle game set in a mysterious and chilling mansion. Players navigate through a series of challenges, uncovering secrets and solving puzzles to escape the mansion's grip.
 
@@ -22,6 +23,8 @@
 
 ## Coming Soon
 Stay tuned for the release of the iOS and Android app versions of "The Haunted Manor" for on-the-go gaming thrills!
+
+![Game Screenshot](asset/demo5.jpg)
 
 ## Contributing
 We welcome contributions from developers, designers, and enthusiasts alike. Feel free to fork the repository, make improvements, and submit pull requests. Together, we can continue to enhance the gaming experience for players worldwide.
