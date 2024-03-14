@@ -1,7 +1,10 @@
+ ![Game Screenshot](asset/demo3.jpg)
 # Project Name: The Haunted Manor
 
 ## Description
 "The Haunted Manor" is an immersive adventure puzzle game set in a mysterious and chilling mansion. Players navigate through a series of challenges, uncovering secrets and solving puzzles to escape the mansion's grip.
+
+ ![Game Screenshot](asset/demo2.jpg)
 
 ## Features
 - Over 20 interactive puzzles and narrative elements developed using GDScript within the Godot game engine.
@@ -9,7 +12,7 @@
 - Efficient management of over 500 project assets using version control systems like GitHub.
 - Resulted in a polished escape room game with a player retention rate of over 80%.
 
-  ![Game Screenshot](asset/demo1.jpg)
+  ![Game Screenshot](asset/demo4.jpg)
 
 ## How to Play
 1. Download or clone the repository to your local machine.
